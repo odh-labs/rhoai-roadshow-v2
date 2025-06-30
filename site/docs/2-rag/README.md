@@ -35,7 +35,7 @@ This repository is designed as a learning and prototyping tool for building GenA
 
 ## 📁 Folder Layout
 
-.
+.  
 ├── downloads/ # PDF pulled from S3  
 ├── chunks/ # Output of Docling chunker  
 ├── embeddings/ # JSON with embeddings and text  
