@@ -2,16 +2,8 @@
 This repo contains a revised OpenShift AI Roadshow v2 - half-day customer event.
 
 # Vision
-The roadshow v2 is intended to showcase everything that differentiates Red Hat and makes us unique.
-It will be relevant to the kinds of things teams are wanting to do with generative and/or predictive/classificatory (traditional) AI.
-
-# Background
-## Problem statement
-The existing AI Roadshow has fallen behind the latest RHOAI functionality and is out of date in terms of the kinds of things our customers want out of an AI/ML engineering platform and what differentiates Red Hat from other vendor and hyperscaler solutions.
-
-One of the challenges with the current format is that the Parasol solution is very comprehensive. This makes inserting new content a major activity. I.e. The current roadshow is a victim of its own success.
-
-A successful solution would make the roadshow activities more loosely coupled and able to be quickly extended as new product capabilities features are released. 
+The roadshow v2 is intended to provide short-sharp use-case (pattern)-centric labs to showcase everything that differentiates Red Hat OpenSHift AI and makes it unique.  
+It will be relevant to the kinds of problems that teams want to do with generative and/or predictive/classificatory (traditional) AI.
 
 # Target audience
 The roadshow will provide value to multiple personas:
