@@ -36,18 +36,18 @@ This repository is designed as a learning and prototyping tool for building GenA
 ## 📁 Folder Layout
 
 .
-├── downloads/ # PDF pulled from S3
-├── chunks/ # Output of Docling chunker
-├── embeddings/ # JSON with embeddings and text
-├── requirements/ # Pip requirements per step
-├── 00-shakeout.ipynb # Used to validate the connectivity to all external systems.
-├── 01-download-from-s3.ipynb
-├── 02-docling-chunker.ipynb
-├── 03-embed-chunks.ipynb
-├── 04-store-in-milvus.ipynb
-├── 05-query-milvus.ipynb
-├── 06-generate-answer.ipynb
-└── README.md
+├── downloads/ # PDF pulled from S3  
+├── chunks/ # Output of Docling chunker  
+├── embeddings/ # JSON with embeddings and text  
+├── requirements/ # Pip requirements per step  
+├── 00-shakeout.ipynb # Used to validate the connectivity to all external systems.  
+├── 01-download-from-s3.ipynb  
+├── 02-docling-chunker.ipynb  
+├── 03-embed-chunks.ipynb  
+├── 04-store-in-milvus.ipynb  
+├── 05-query-milvus.ipynb  
+├── 06-generate-answer.ipynb  
+└── README.md  
 
 ---
 
