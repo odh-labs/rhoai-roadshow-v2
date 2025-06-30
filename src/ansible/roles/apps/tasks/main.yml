@@ -1,0 +1,18 @@
+---
+- debug:
+    msg:
+      - "Follow the install progress"
+      - "tail -f {{ tempfile_1.path }}/rhoai-policy-collection/output.log"
+
+- name: Configure Cluster
+  script: deploy-apps.sh
+  register: cmd
+  failed_when: "cmd.rc != 0"
+  vars:
+    ansible_command_timeout: 1800
+  environment:
+    WORK_DIR: "{{ tempfile_1.path }}"
+    AWS_PROFILE: "{{ lookup('ansible.builtin.env', 'AWS_PROFILE') }}"
+    BASE_DOMAIN: "{{ lookup('ansible.builtin.env', 'BASE_DOMAIN') }}"
+    CLUSTER_NAME: "{{ lookup('ansible.builtin.env', 'CLUSTER_NAME') }}"
+    ADMIN_PASSWORD: "{{ lookup('ansible.builtin.env', 'ADMIN_PASSWORD') }}"

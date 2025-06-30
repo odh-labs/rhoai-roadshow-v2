@@ -1,0 +1,24 @@
+---
+- debug:
+    msg:
+      - "Follow the install progress"
+      - "tail -f {{ tempfile_1.path }}/output.log"
+
+- name: Install SNO on SPOT
+  script: sno-on-spot.sh
+  register: cmd
+  failed_when: "cmd.rc != 0"
+  vars:
+    ansible_command_timeout: 5400
+  environment:
+    WORK_DIR: "{{ tempfile_1.path }}"
+    AWS_PROFILE: "{{ lookup('ansible.builtin.env', 'AWS_PROFILE') }}"
+    AWS_DEFAULT_REGION: "{{ lookup('ansible.builtin.env', 'AWS_DEFAULT_REGION') }}"
+    AWS_DEFAULT_ZONES: "{{ lookup('ansible.builtin.env', 'AWS_DEFAULT_ZONES') }}"
+    CLUSTER_NAME: "{{ lookup('ansible.builtin.env', 'CLUSTER_NAME') }}"
+    BASE_DOMAIN: "{{ lookup('ansible.builtin.env', 'BASE_DOMAIN') }}"
+    INSTANCE_TYPE: "{{ lookup('ansible.builtin.env', 'INSTANCE_TYPE') }}"
+    PULL_SECRET: "{{ lookup('ansible.builtin.env', 'PULL_SECRET') }}"
+    SSH_KEY: "{{ lookup('ansible.builtin.env', 'SSH_KEY') }}"
+    ROOT_VOLUME_SIZE: "{{ lookup('ansible.builtin.env', 'ROOT_VOLUME_SIZE') }}"
+    OPENSHIFT_VERSION: "{{ lookup('ansible.builtin.env', 'OPENSHIFT_VERSION') }}"

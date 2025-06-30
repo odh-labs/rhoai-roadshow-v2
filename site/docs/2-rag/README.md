@@ -1,0 +1,11 @@
+# RAG
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id leo eu tortor vulputate mattis nec ac libero. Maecenas finibus est eu nisl egestas euismod. Nullam et finibus nulla. Nullam commodo non elit et imperdiet. Nullam tincidunt mollis egestas. Nulla nec lorem non turpis venenatis ornare. Donec id libero magna. Etiam sed ante massa.
+
+Nullam id lorem est. Interdum et malesuada fames ac ante ipsum primis in faucibus. In semper arcu enim, elementum feugiat diam porta quis. Aenean eget eros lacinia, lobortis lectus eu, faucibus nulla. Curabitur cursus purus ac mauris semper semper. Sed varius sagittis leo, sit amet vulputate nibh consequat quis. Etiam finibus pulvinar diam ac interdum. Cras molestie ante vel aliquam lacinia. Curabitur suscipit malesuada facilisis. Sed in lorem vitae orci molestie interdum. Nunc luctus eleifend libero eu vulputate.
+
+Suspendisse aliquet, lacus at suscipit maximus, lacus arcu cursus lacus, eget congue leo tortor sed nisl. Sed sagittis justo at magna laoreet faucibus et in est. Integer vitae metus euismod, viverra nisi eget, semper tellus. Ut lobortis finibus enim, vel tristique diam egestas id. Duis ac suscipit purus. Sed dictum convallis tellus, quis pulvinar felis interdum nec. Fusce risus arcu, convallis eget ipsum id, congue congue turpis. Aliquam id massa nisl. Nulla lacinia nulla maximus, congue neque id, cursus orci.
+
+Nam orci sem, viverra id bibendum sed, luctus eu libero. Fusce in quam eleifend, maximus lorem ut, rutrum ipsum. Curabitur viverra massa a libero viverra rutrum. In hac habitasse platea dictumst. Ut hendrerit vel nulla sed euismod. Fusce mattis et enim in vestibulum. Curabitur lacinia nulla enim, ac tristique augue blandit non. Sed auctor eleifend justo vel vulputate.
+
+Vestibulum non quam odio. Sed mauris mi, mollis euismod massa in, egestas finibus quam. Ut ullamcorper nulla vel dictum consectetur. Ut consectetur vulputate feugiat. Nunc vitae faucibus odio, quis placerat neque. Donec consectetur condimentum erat et placerat. Suspendisse maximus odio sapien, vel ullamcorper ligula aliquam eget.
