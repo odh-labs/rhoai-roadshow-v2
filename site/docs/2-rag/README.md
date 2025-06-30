@@ -5,7 +5,7 @@ This project demonstrates an end-to-end **Retrieval-Augmented Generation (RAG)**
 - Extracting documents from object storage (MinIO)
 - Chunking documents into semantically meaningful units (Docling)
 - Generating vector embeddings (SentenceTransformers)
-- Storing and querying these embeddings (Milvus Lite)
+- Storing and querying these embeddings (Milvus)
 - Augmenting a Large Language Model (LLM) with retrieved context
 
 ---
@@ -15,7 +15,7 @@ This project demonstrates an end-to-end **Retrieval-Augmented Generation (RAG)**
 - **MinIO** – Local S3-compatible object storage for source PDFs
 - **Docling** – Intelligent document chunker for structured and unstructured formats
 - **SentenceTransformers** – Embedding model for generating dense vectors
-- **Milvus Lite** – Embedded vector database using SQLite backend
+- **Milvus** – Embedded vector database Milvus local backend
 - **OpenAI / LLM** – To generate answers based on retrieved chunks
 
 ---
@@ -40,7 +40,7 @@ This repository is designed as a learning and prototyping tool for building GenA
 ├── chunks/ # Output of Docling chunker
 ├── embeddings/ # JSON with embeddings and text
 ├── requirements/ # Pip requirements per step
-├── 00-shakeout.ipynb
+├── 00-shakeout.ipynb # Used to validate the connectivity to all external systems.
 ├── 01-download-from-s3.ipynb
 ├── 02-docling-chunker.ipynb
 ├── 03-embed-chunks.ipynb
@@ -51,24 +51,9 @@ This repository is designed as a learning and prototyping tool for building GenA
 
 ---
 
-
----
-
-## ✅ Why Milvus Lite?
-
-This project uses **Milvus Lite** instead of a remote vector DB server for simplicity. It stores all data locally using SQLite, requiring **no external services or Docker** to run vector search. This makes it ideal for:
-
-- Demos and experimentation
-- Teaching RAG concepts
-- Running on laptops or edge devices
-
----
-
 ## 🏁 Next Steps
 
-See each script in order (`01-` through `06-`) and refer to the detailed `README.md` included with the pipeline for setup instructions, requirements, and expected outputs.
-
-You can also swap out components (e.g. embedding model, LLM, or use FAISS instead of Milvus) to extend the architecture.
+See each script in order (`01-` through `06-`) and refer to the `Markdown` cells included in the Jupyter notebooks for instructions, a description of what is happening, requirements, and expected outputs.
 
 ---
 
