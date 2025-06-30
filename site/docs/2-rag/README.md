@@ -1,11 +1,76 @@
-# RAG
+# 🧠 RAG GenAI Demo with Docling, Milvus Lite, and MinIO
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id leo eu tortor vulputate mattis nec ac libero. Maecenas finibus est eu nisl egestas euismod. Nullam et finibus nulla. Nullam commodo non elit et imperdiet. Nullam tincidunt mollis egestas. Nulla nec lorem non turpis venenatis ornare. Donec id libero magna. Etiam sed ante massa.
+This project demonstrates an end-to-end **Retrieval-Augmented Generation (RAG)** workflow using only local and open-source tools. It is designed as a clear, modular exercise that walks through every stage of the pipeline:
 
-Nullam id lorem est. Interdum et malesuada fames ac ante ipsum primis in faucibus. In semper arcu enim, elementum feugiat diam porta quis. Aenean eget eros lacinia, lobortis lectus eu, faucibus nulla. Curabitur cursus purus ac mauris semper semper. Sed varius sagittis leo, sit amet vulputate nibh consequat quis. Etiam finibus pulvinar diam ac interdum. Cras molestie ante vel aliquam lacinia. Curabitur suscipit malesuada facilisis. Sed in lorem vitae orci molestie interdum. Nunc luctus eleifend libero eu vulputate.
+- Extracting documents from object storage (MinIO)
+- Chunking documents into semantically meaningful units (Docling)
+- Generating vector embeddings (SentenceTransformers)
+- Storing and querying these embeddings (Milvus Lite)
+- Augmenting a Large Language Model (LLM) with retrieved context
 
-Suspendisse aliquet, lacus at suscipit maximus, lacus arcu cursus lacus, eget congue leo tortor sed nisl. Sed sagittis justo at magna laoreet faucibus et in est. Integer vitae metus euismod, viverra nisi eget, semper tellus. Ut lobortis finibus enim, vel tristique diam egestas id. Duis ac suscipit purus. Sed dictum convallis tellus, quis pulvinar felis interdum nec. Fusce risus arcu, convallis eget ipsum id, congue congue turpis. Aliquam id massa nisl. Nulla lacinia nulla maximus, congue neque id, cursus orci.
+---
 
-Nam orci sem, viverra id bibendum sed, luctus eu libero. Fusce in quam eleifend, maximus lorem ut, rutrum ipsum. Curabitur viverra massa a libero viverra rutrum. In hac habitasse platea dictumst. Ut hendrerit vel nulla sed euismod. Fusce mattis et enim in vestibulum. Curabitur lacinia nulla enim, ac tristique augue blandit non. Sed auctor eleifend justo vel vulputate.
+## 🔧 Technologies Used
 
-Vestibulum non quam odio. Sed mauris mi, mollis euismod massa in, egestas finibus quam. Ut ullamcorper nulla vel dictum consectetur. Ut consectetur vulputate feugiat. Nunc vitae faucibus odio, quis placerat neque. Donec consectetur condimentum erat et placerat. Suspendisse maximus odio sapien, vel ullamcorper ligula aliquam eget.
+- **MinIO** – Local S3-compatible object storage for source PDFs
+- **Docling** – Intelligent document chunker for structured and unstructured formats
+- **SentenceTransformers** – Embedding model for generating dense vectors
+- **Milvus Lite** – Embedded vector database using SQLite backend
+- **OpenAI / LLM** – To generate answers based on retrieved chunks
+
+---
+
+## 🧪 Exercise Goal
+
+This repository is designed as a learning and prototyping tool for building GenAI systems with structured vector search pipelines. It demonstrates how to:
+
+1. Pull a document from MinIO (`source-docs`)
+2. Chunk the document into usable context windows
+3. Convert each chunk to a dense vector
+4. Store those vectors in Milvus Lite
+5. Run a query → perform vector search → get relevant chunks
+6. Use those chunks to prompt an LLM for grounded answers
+
+---
+
+## 📁 Folder Layout
+
+.
+├── downloads/ # PDF pulled from S3
+├── chunks/ # Output of Docling chunker
+├── embeddings/ # JSON with embeddings and text
+├── requirements/ # Pip requirements per step
+├── 00-shakeout.ipynb
+├── 01-download-from-s3.ipynb
+├── 02-docling-chunker.ipynb
+├── 03-embed-chunks.ipynb
+├── 04-store-in-milvus.ipynb
+├── 05-query-milvus.ipynb
+├── 06-generate-answer.ipynb
+└── README.md
+
+---
+
+
+---
+
+## ✅ Why Milvus Lite?
+
+This project uses **Milvus Lite** instead of a remote vector DB server for simplicity. It stores all data locally using SQLite, requiring **no external services or Docker** to run vector search. This makes it ideal for:
+
+- Demos and experimentation
+- Teaching RAG concepts
+- Running on laptops or edge devices
+
+---
+
+## 🏁 Next Steps
+
+See each script in order (`01-` through `06-`) and refer to the detailed `README.md` included with the pipeline for setup instructions, requirements, and expected outputs.
+
+You can also swap out components (e.g. embedding model, LLM, or use FAISS instead of Milvus) to extend the architecture.
+
+---
+
+## 👥 Acknowledgements
+TBC
