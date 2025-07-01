@@ -30,7 +30,7 @@ git clone https://github.com/odh-labs/rhoai-roadshow-v2
 
 Open up the following notebook in your workspace.
 
-<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/docs/3-agents-tools/notebooks/Level1_getting_started_with_Llama_Stack.ipynb" target="_blank">Level1_getting_started_with_Llama_Stack.ipynb</a>
+<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level1_getting_started_with_Llama_Stack.ipynb" target="_blank">Level1_getting_started_with_Llama_Stack.ipynb</a>
 
 In this notebook we will help you set up your environment for this tutorial.
 

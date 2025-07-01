@@ -10,7 +10,7 @@ git clone https://github.com/odh-labs/rhoai-roadshow-v2
 
 Open up the following notebook in your workspace.
 
-<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/docs/6-gpuaas/notebooks/Level2_gpu_operator.ipynb" target="_blank">Level2_gpu_operator.ipynb</a>
+<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/6-gpuaas/notebooks/Level2_gpu_operator.ipynb" target="_blank">Level2_gpu_operator.ipynb</a>
 
 We will cover configuring and scaling our new GPUs in OpenShift.
 

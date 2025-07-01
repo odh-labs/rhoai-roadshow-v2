@@ -2,7 +2,7 @@
 
 Open up the following notebook in your workspace.
 
-<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/docs/3-agents-tools/notebooks/Level2_simple_agent_with_websearch.ipynb" target="_blank">Level2_simple_agent_with_websearch.ipynb</a>
+<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level2_simple_agent_with_websearch.ipynb" target="_blank">Level2_simple_agent_with_websearch.ipynb</a>
 
 In this notebook we will introduce how to build a simple agent using Llama Stack's agent framework, enhanced with a single tool: the builtin web search tool.
 
