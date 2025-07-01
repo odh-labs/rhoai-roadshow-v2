@@ -23,14 +23,14 @@ Select `Create workbench`.
 Clone the code using your github user into your workbench by using the `Terminal` and entering:
 
 ```bash
-git clone https://github.com/odh-labs/rhoai-roadshow
+git clone https://github.com/odh-labs/rhoai-roadshow-v2
 ```
 
 ![images/clone-code.png](images/clone-code.png)
 
 Open up the following notebook in your workspace.
 
-<a href="https://github.com/odh-labs/rhoai-roadshow/blob/main/site/docs/3-agents-tools/notebooks/Level1_getting_started_with_Llama_Stack.ipynb" target="_blank">Level1_getting_started_with_Llama_Stack.ipynb</a>
+<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/docs/3-agents-tools/notebooks/Level1_getting_started_with_Llama_Stack.ipynb" target="_blank">Level1_getting_started_with_Llama_Stack.ipynb</a>
 
 In this notebook we will help you set up your environment for this tutorial.
 
