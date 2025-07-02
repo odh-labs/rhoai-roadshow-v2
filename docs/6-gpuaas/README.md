@@ -1,8 +1,9 @@
 # GPU As A Service
 
-GPUaaS narrative
+We are going to learn about GPU as a Service.
 
-- ✅ create a new gpu machineset openshift using nvidia A10 instance on cluster
-- ✅ configure gpu operator, time-slicing for parrallel/sharing, describe MIG?
-- ✅ create namespace, rbac, quote, storage, taints/tolerations, notebook, isolation for a new LLM use case workload
-- [ ] advanced gpuaas with Kueue - distributed workloads, future
+- ✅ [Introduction](6-gpuaas/0-intro.md)
+- ✅ [Adding a new GPU worker node](6-gpuaas/1-add-gpu-node-cluster.md)
+- ✅ [Configure new GPUs](6-gpuaas/2-gpu-operator.md)
+- ✅ [Deploy a new GPU workload](6-gpuaas/3-new-gpu-workload.md)
+- [ ] [Advanced GPUaaS with Kueue](6-gpuaas/4-advanced-gpuaas.md)
