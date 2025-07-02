@@ -15,3 +15,13 @@ Open up the following notebook in your workspace.
 We will cover how we can deploy workloads using Kueue/Ray/Cloudflare.
 
 ![images/level4-advanced-gpuaas.png](images/level4-advanced-gpuaas.png)
+
+👷‍♂️ Work In Progress 👷‍♂️
+
+The distributed workloads using Kueue is under active development.
+
+The future of GPUaaS within OpenShift is using Kueue available for all workloads across GPU enabled nodes.
+
+For now we are using the current state notebooks that are part of the product.
+
+![images/ocp-gpu-multitenant.png](images/ocp-gpu-multitenant.png)
