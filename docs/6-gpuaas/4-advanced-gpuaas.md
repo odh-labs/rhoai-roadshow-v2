@@ -14,4 +14,4 @@ Open up the following notebook in your workspace.
 
 We will cover how we can deploy workloads using Kueue/Ray/Cloudflare.
 
-![images/level3-new-gpu-workload.png](images/level3-new-gpu-workload.png)
+![images/level4-advanced-gpuaas.png](images/level4-advanced-gpuaas.png)
