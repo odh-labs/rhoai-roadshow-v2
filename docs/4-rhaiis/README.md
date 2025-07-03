@@ -18,7 +18,11 @@ The key benefits are:
 * **Red Hat Validated Models** - Red Hat AI provides access to a repository of third-party models that are validated to run efficiently across the platform. This set of leading third-party models are run through capacity guidance planning scenarios, so you can make informed decisions about the right combination of model, deployment settings, and hardware accelerator for your domain specific use cases.
 
 ## Hands-on Lab
-In this module, you will learn:
+In this module, we will walk you through the key features of Red Hat AI Inference Server.
+
+![rhaiis-overview.png](images/rhaiis-overview.png)
+
+You will learn:
  - ✅ How to install RHAIIS on a cuda notebook
  - ✅ How to use a inference endpoint
  - ✅ Measure the performance of serving a LLM
