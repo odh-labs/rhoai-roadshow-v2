@@ -24,4 +24,9 @@ Leave all the other fields as defaults. You should see the `Hardware profile` au
 
 Click `Create workbench`.
 
-Wait until the status of workbench is changed to `Started`.
+Wait until the status of workbench is changed to `Running`.
+
+![images/workbench-ready.png](images/workbench-ready.png)
+
+Click the name of the workbench `vllm`, and it will bring you to JupyterLab web console as below.
+![images/jupyterlab-ready.png](images/jupyterlab-ready.png)
