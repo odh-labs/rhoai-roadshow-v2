@@ -10,7 +10,7 @@
   * [🤖 Advanced Agent with Prompt Chaining and ReAct Agent](3-agents-tools/3-advanced-agent-with-prompt-chain-react.md)
   * [💥 Agents and MCP](3-agents-tools/4-agents-and-mcp.md)
 * [vLLMd](4-rhaiis/README.md)
-  * [🪛 Introduction](4-rhaiis/1-intro.md)
+  * [🪛 Introduction](4-rhaiis/0-intro.md)
 * [LLM Observability](5-llm-observability/README.md)
   * [🕵🏻 Introduction](5-llm-observability/1-intro.md)
 * [GPU As A Service](6-gpuaas/README.md)
