@@ -193,3 +193,4 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 rhoai-roadshow.code-workspace
+rhoai-roadshow-v2.code-workspace
