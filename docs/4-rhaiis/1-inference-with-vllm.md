@@ -1,4 +1,4 @@
-# Level 1: Serving a Model with vLLM
+# Lab 1: Serving a Model with vLLM
 
 This walkthrough guide will teach you how to serve an open-source model using vLLM (the upstream project of Red Hat AI Inference Server) and test its performance through benchmarking.
 
