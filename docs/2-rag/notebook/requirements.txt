@@ -1,5 +1,5 @@
-pymilvus==2.4.4
-sentence-transformers==2.2.2
+pymilvus==2.5.0      # This needs to be tied to the version of Milvus that is running: https://milvus.io/api-reference/pymilvus/v2.6.x/About.md#Compatibility
+sentence-transformers==3.0.1
 scikit-learn==1.4.2
 matplotlib==3.8.4
 marshmallow==3.20.2
