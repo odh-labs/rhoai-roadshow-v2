@@ -34,7 +34,8 @@ In this exercise we will run a `shakeout` script to validate that the envonrment
    Endpoint: **minio.minio.svc.cluster.local:9000**  
    Region: **none**  
    Bucket: **rag-docs**  
-4. Click **Save**.  
+
+Review the information you have entered:
 
 ![./images/create-workbench-2.png](images/create-workbench-2.png)
 
