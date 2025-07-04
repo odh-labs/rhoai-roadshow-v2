@@ -7,7 +7,7 @@ npm i docsify-cli -g
 docsify serve ./docs
 ```
 
-## Running the site from a container
+## 🫙Running the site from a container
 If you want to run Node from within a container, you can use the following command from the top directory of the cloned git repository.
 
 Note: This image is derived from the Red Hat Node.js Image Builder image.
