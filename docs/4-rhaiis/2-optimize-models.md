@@ -238,11 +238,11 @@ A popular gaming company used Red Hat's INT8 quantized Llama 70B with vLLM to po
 
 Model optimization with LLM Compressor and vLLM provides significant advantages:
 
-✅ **Lower operational costs** - 40-50% GPU savings
-✅ **Faster deployment** - streamlined optimization process  
-✅ **Maintained accuracy** - minimal performance degradation
-✅ **Real-time responsiveness** - improved inference speed
-✅ **Scalability** - deploy AI smarter and cheaper
+✅ **Lower operational costs** - 40-50% GPU savings \
+✅ **Faster deployment** - streamlined optimization process  \
+✅ **Maintained accuracy** - minimal performance degradation \
+✅ **Real-time responsiveness** - improved inference speed \
+✅ **Scalability** - deploy AI smarter and cheaper \
 
 Whether you're scaling a startup or steering an enterprise, quantization lets you deploy AI more efficiently while maintaining quality and performance.
 
