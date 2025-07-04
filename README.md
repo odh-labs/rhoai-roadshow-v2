@@ -1,6 +1,10 @@
 # Red Hat OpenShift AI Roadshow II
 This repo contains a revised OpenShift AI Roadshow v2 - half-day customer event.
 
+# TL;DR (a.k.a get going now)
+The instructions for the workshop are located under the `docs` directory.  
+To start the document server, follow the instructions [here](https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/README.md).
+
 # Vision
 The roadshow v2 is intended to provide short-sharp use-case (pattern)-centric labs to showcase everything that differentiates Red Hat OpenSHift AI and makes it unique.  
 It will be relevant to the kinds of problems that teams want to do with generative and/or predictive/classificatory (traditional) AI.
@@ -27,6 +31,7 @@ The roadshow will provide value to multiple personas:
 # Content
 
 Will focus on developing all of the green capabilities in the [scoping doc](https://github.com/odh-labs/rhoai-roadshow/blob/main/GEN_AI_USE_CASES.md)
+
 
 
 
