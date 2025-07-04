@@ -13,6 +13,7 @@
   * [🕵🏻  Introduction](4-rhaiis/0-intro.md)
   * [📈 Inference with vLLM](4-rhaiis/1-inference-with-vllm.md)
   * [📡 Optimize models](4-rhaiis/2-optimize-models.md)
+  * [📚 Validated models](4-rhaiis/3-validated-models.md)
 * [LLM Observability](5-llm-observability/README.md)
   * [🕵🏻 Introduction](5-llm-observability/1-intro.md)
 * [GPU As A Service](6-gpuaas/README.md)
