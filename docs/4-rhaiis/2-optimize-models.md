@@ -242,7 +242,7 @@ Model optimization with LLM Compressor and vLLM provides significant advantages:
 ✅ **Faster deployment** - streamlined optimization process  \
 ✅ **Maintained accuracy** - minimal performance degradation \
 ✅ **Real-time responsiveness** - improved inference speed \
-✅ **Scalability** - deploy AI smarter and cheaper \
+✅ **Scalability** - deploy AI smarter and cheaper 
 
 Whether you're scaling a startup or steering an enterprise, quantization lets you deploy AI more efficiently while maintaining quality and performance.
 
