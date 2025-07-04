@@ -55,7 +55,7 @@ export EMAIL=mhepburn@redhat.com  # change this for certs admin
 export ANSIBLE_VAULT_SECRET=,..   # change this to the ansible secret for vault-sno
 ```
 
-Run ansible - each role listed in here.
+Run ansible to install environment in one go.
 
 ```bash
 ansible-playbook -i hosts rhoai-roadshow.yaml
