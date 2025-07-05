@@ -11,8 +11,8 @@ Originally introduced by Meta AI, RAG was designed to address the limitations of
 
 Agenda: 
 
-* 📍 [Validate the lab environment](./1-shakeout-test.md)
-* 📍 [Configure lab environment](./2-getting-started.md)
-* 📍 [Introduction to Vector Databases](./3-vector-databases.md)
-* 📍 [A simple RAG implementation](./4-simple-rag.md)
-* 📍 [Extending the RAG application with Metadata](./5-extended-rag.md)
+* 📍 [Getting started - configure the lab workbench](2-rag/1-getting-started.md)
+* 📍 [Validate the lab environment](2-rag/2-shakeout-test.md)
+* 📍 [Introduction to Vector Databases](2-rag/3-vector-databases.md)
+* 📍 [A simple RAG implementation](2-rag/4-simple-rag.md)
+* 📍 [Extending the RAG application with Metadata](2-rag/5-extended-rag.md)
