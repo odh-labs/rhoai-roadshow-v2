@@ -1,6 +1,6 @@
 # 💁 Introduction
 
-In this exercise we will run a `shakeout` script to validate that the envonrment setup is correct and that the labs will operate properly.
+In this exercise we will configure the workbench that you will use for the lab.
 
 # 🧑‍🏫 Instructions 
 
@@ -34,7 +34,8 @@ In this exercise we will run a `shakeout` script to validate that the envonrment
    Endpoint: **minio.minio.svc.cluster.local:9000**  
    Region: **none**  
    Bucket: **rag-docs**  
-4. Click **Save**.  
+
+Review the information you have entered:
 
 ![./images/create-workbench-2.png](images/create-workbench-2.png)
 
@@ -73,12 +74,4 @@ git clone https://github.com/odh-labs/rhoai-roadshow-v2
 
 ![images/clone-code.png](images/clone-code.png)
 
-Open up the following notebook in your workspace.
-
-<a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level1_getting_started_with_Llama_Stack.ipynb" target="_blank">Level1_getting_started_with_Llama_Stack.ipynb</a>
-
-In this notebook we will help you set up your environment for this tutorial.
-
-We will cover installing the necessary libraries, configuring essential parameters, and connecting to a Llama Stack server.
-
-![images/level1-getting-started.png](images/level1-getting-started.png)
+You are now ready to move on to the next section where you will validate the lab environment.

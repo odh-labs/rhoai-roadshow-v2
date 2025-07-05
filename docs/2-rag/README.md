@@ -1,61 +1,28 @@
-# 🧠 RAG GenAI Demo with Docling, Milvus Lite, and MinIO
+# RAG Module – Document Ingestion  
+Prepare enterprise documents for Retrieval-Augmented Generation by converting PDFs to text, creating embeddings, and loading them into Milvus on OpenShift AI. :contentReference[oaicite:0]{index=0}
 
-This project demonstrates an end-to-end **Retrieval-Augmented Generation (RAG)** workflow using only local and open-source tools. It is designed as a clear, modular exercise that walks through every stage of the pipeline:
+## What is it?
+This notebook is the first step in the RAG lab series. It shows you how to:  
+* connect to a MinIO/S3 object store and retrieve a PDF,  
+* parse the PDF into clean, chunk-sized text with **Docling**,
+* generate 1 536-dimension semantic embeddings using the `text-embedding-3-small` model from OpenAI, and  
+* store those embeddings in a **Milvus** vector collection for similarity search. :contentReference[oaicite:1]{index=1}
 
-- Extracting documents from object storage (MinIO)
-- Chunking documents into semantically meaningful units (Docling)
-- Generating vector embeddings (SentenceTransformers)
-- Storing and querying these embeddings (Milvus)
-- Augmenting a Large Language Model (LLM) with retrieved context
+## Why it’s important
+Efficient document ingestion is the foundation of any RAG pipeline: without high-quality chunks and embeddings, downstream retrieval will be slow, inaccurate, or both. Automating this step inside an OpenShift AI workspace lets data scientists repeat the process for thousands of PDFs while keeping sensitive content inside the cluster. :contentReference[oaicite:2]{index=2}
 
----
+## Hands-on Lab
+Follow the notebook to complete the workflow end-to-end.
 
-## 🔧 Technologies Used
+You will learn  
+- ✅ **Workspace setup** – export the environment variables `OPENAI_API_KEY`, `AWS_S3_ENDPOINT`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_DEFAULT_REGION`, and `AWS_S3_BUCKET`. :contentReference[oaicite:3]{index=3}  
+- ✅ **Download a document** – use `boto3` to copy `2502.07835v1.pdf` from MinIO to your local `downloads/` directory. :contentReference[oaicite:4]{index=4}  
+- ✅ **Parse & chunk** – convert the PDF into structured pages and text segments with `DocumentConverter`. :contentReference[oaicite:5]{index=5}  
+- ✅ **Generate embeddings** – wrap the OpenAI API in a helper function and confirm the embedding dimension. :contentReference[oaicite:6]{index=6}  
+- ✅ **Create a vector store** – initialise a Milvus collection with matching dimensions and insert the embeddings. :contentReference[oaicite:7]{index=7}  
+- ✅ **Verify ingestion** – inspect the collection and run a sample query to ensure your vectors are searchable.
 
-- **MinIO** – Local S3-compatible object storage for source PDFs
-- **Docling** – Intelligent document chunker for structured and unstructured formats
-- **SentenceTransformers** – Embedding model for generating dense vectors
-- **Milvus** – Embedded vector database Milvus local backend
-- **OpenAI / LLM** – To generate answers based on retrieved chunks
+> **Estimated time:** 15 – 20 minutes  
+> **Prerequisites:** An OpenShift AI Workbench project with network access to both OpenAI and your MinIO instance, plus a valid OpenAI API key.
 
----
-
-## 🧪 Exercise Goal
-
-This repository is designed as a learning and prototyping tool for building GenAI systems with structured vector search pipelines. It demonstrates how to:
-
-1. Pull a document from MinIO (`source-docs`)
-2. Chunk the document into usable context windows
-3. Convert each chunk to a dense vector
-4. Store those vectors in Milvus Lite
-5. Run a query → perform vector search → get relevant chunks
-6. Use those chunks to prompt an LLM for grounded answers
-
----
-
-## 📁 Folder Layout
-
-.  
-├── downloads/ # PDF pulled from S3  
-├── chunks/ # Output of Docling chunker  
-├── embeddings/ # JSON with embeddings and text  
-├── requirements/ # Pip requirements per step  
-├── 00-shakeout.ipynb # Used to validate the connectivity to all external systems.  
-├── 01-download-from-s3.ipynb  
-├── 02-docling-chunker.ipynb  
-├── 03-embed-chunks.ipynb  
-├── 04-store-in-milvus.ipynb  
-├── 05-query-milvus.ipynb  
-├── 06-generate-answer.ipynb  
-└── README.md  
-
----
-
-## 🏁 Next Steps
-
-See each script in order (`01-` through `06-`) and refer to the `Markdown` cells included in the Jupyter notebooks for instructions, a description of what is happening, requirements, and expected outputs.
-
----
-
-## 👥 Acknowledgements
-TBC
+Once completed, your PDF is available for low-latency, semantic retrieval in the subsequent RAG Question-Answering notebook.

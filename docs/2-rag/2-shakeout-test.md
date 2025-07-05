@@ -1,0 +1,1 @@
+# Validate the Lab Environment
