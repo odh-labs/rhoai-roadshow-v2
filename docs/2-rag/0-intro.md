@@ -1,11 +1,17 @@
-# Introduction
+# Retrieval Augmented Generation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id leo eu tortor vulputate mattis nec ac libero. Maecenas finibus est eu nisl egestas euismod. Nullam et finibus nulla. Nullam commodo non elit et imperdiet. Nullam tincidunt mollis egestas. Nulla nec lorem non turpis venenatis ornare. Donec id libero magna. Etiam sed ante massa.
 
-Nullam id lorem est. Interdum et malesuada fames ac ante ipsum primis in faucibus. In semper arcu enim, elementum feugiat diam porta quis. Aenean eget eros lacinia, lobortis lectus eu, faucibus nulla. Curabitur cursus purus ac mauris semper semper. Sed varius sagittis leo, sit amet vulputate nibh consequat quis. Etiam finibus pulvinar diam ac interdum. Cras molestie ante vel aliquam lacinia. Curabitur suscipit malesuada facilisis. Sed in lorem vitae orci molestie interdum. Nunc luctus eleifend libero eu vulputate.
+Retrieval-Augmented Generation (RAG) is a technique in generative AI that combines the strengths of large language models (LLMs) with information-retrieval systems to produce accurate, context-aware responses grounded in external knowledge. 
 
-Suspendisse aliquet, lacus at suscipit maximus, lacus arcu cursus lacus, eget congue leo tortor sed nisl. Sed sagittis justo at magna laoreet faucibus et in est. Integer vitae metus euismod, viverra nisi eget, semper tellus. Ut lobortis finibus enim, vel tristique diam egestas id. Duis ac suscipit purus. Sed dictum convallis tellus, quis pulvinar felis interdum nec. Fusce risus arcu, convallis eget ipsum id, congue congue turpis. Aliquam id massa nisl. Nulla lacinia nulla maximus, congue neque id, cursus orci.
+Unlike traditional LLMs that rely solely on pre-trained parameters, RAG dynamically retrieves relevant documents from a knowledge base at inference time and incorporates their content into the generation process. 
 
-Nam orci sem, viverra id bibendum sed, luctus eu libero. Fusce in quam eleifend, maximus lorem ut, rutrum ipsum. Curabitur viverra massa a libero viverra rutrum. In hac habitasse platea dictumst. Ut hendrerit vel nulla sed euismod. Fusce mattis et enim in vestibulum. Curabitur lacinia nulla enim, ac tristique augue blandit non. Sed auctor eleifend justo vel vulputate.
+This approach enhances factual accuracy, reduces hallucinations, and allows the model to respond with up-to-date or domain-specific information. For businesses, RAG provides a powerful advantage: it enables the integration of proprietary data and knowledge sources into AI responses without the need to fine-tune the underlying model. This makes RAG especially valuable for enterprise applications where reliability, traceability, and alignment with internal knowledge are essential.
 
-Vestibulum non quam odio. Sed mauris mi, mollis euismod massa in, egestas finibus quam. Ut ullamcorper nulla vel dictum consectetur. Ut consectetur vulputate feugiat. Nunc vitae faucibus odio, quis placerat neque. Donec consectetur condimentum erat et placerat. Suspendisse maximus odio sapien, vel ullamcorper ligula aliquam eget.
+Originally introduced by Meta AI, RAG was designed to address the limitations of standalone LLMs, particularly their tendency to hallucinate information when responding to knowledge-intensive queries.
+
+Agenda: 
+
+* 📍 [Validate the lab environment](./1-shakeout-test.md)
+* 📍 [Introduction to Vector Databases](./2-vector-databases.md)
+* 📍 [A simple RAG implementation](./3-simple-rag.md)
+* 📍 [Extending the RAG application with Metadata](./4-extended-rag.md)
