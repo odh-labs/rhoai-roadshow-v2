@@ -3,7 +3,7 @@
   * [🤸‍♀️ Introduction](1-data-engineering/1-intro.md)
 * [RAG](2-rag/README.md)
   * [🔭 Introduction](2-rag/0-intro.md)
-  * [🌌 Getting started - configure the lab environment](2-rag/1-getting-started.md)
+  * [🌌 Getting started - configure the lab workbench](2-rag/1-getting-started.md)
   * [☑️ Validate the lab environment](2-rag/2-shakeout-test.md)
   * [📄 Introduction to vector databases](2-rag/3-vector-databases.md)
   * [🤘 A simple RAG implementation](2-rag/4-simple-rag.md)
