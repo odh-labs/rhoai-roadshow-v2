@@ -7,3 +7,4 @@ We are going to learn about GPU as a Service.
 - ✅ [Configure new GPUs](6-gpuaas/2-gpu-operator.md)
 - ✅ [Deploy a new GPU workload](6-gpuaas/3-new-gpu-workload.md)
 - 👷‍♂️ [Advanced GPUaaS with Kueue](6-gpuaas/4-advanced-gpuaas.md)
+- 👷‍♂️ [GPUaaS multi GPU+Node](6-gpuaas/5-gpuaas-multi-gpu-node.md)
