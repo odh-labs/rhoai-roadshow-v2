@@ -27,6 +27,6 @@
   * [☎️ Configuring new GPUs](6-gpuaas/2-gpu-operator.md)
   * [🥡 Deploy a new GPU workload](6-gpuaas/3-new-gpu-workload.md)
   * [📡 Advanced GPUaaS with Kueue](6-gpuaas/4-advanced-gpuaas.md)
-  * [🎁 GPUaaS Multi GPU - Multi Node](6-gpuaas/5-gpuaas-multi-gpu-node.md)
+  * [🎁 Inference Multi GPU + Multi Node](6-gpuaas/5-gpuaas-multi-gpu-node.md)
 * [Platform](7-platform/README.md)
   * [💻 Introduction](7-platform/1-intro.md)
