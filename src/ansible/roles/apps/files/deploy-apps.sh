@@ -45,6 +45,10 @@ echo "💥 Setup Vault" | tee -a output.log
 cat gitops/bootstrap/vault-secret.yaml | envsubst | oc apply -f-
 ./gitops/bootstrap/vault-setup.sh -d 2>&1 | tee -a output.log
 
+# setup efs
+echo "💥 Setup EFS" | tee -a output.log
+./gitops/bootstrap/storage-create-efs.sh -d 2>&1 | tee -a output.log
+
 # final check
 echo "💥 Checking install..." | tee -a output.log
 ./gitops/bootstrap/check-install.sh 2>&1 | tee -a output.log
