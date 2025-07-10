@@ -1,26 +1,11 @@
+# Validate the Lab Environment
 
+In this exercise you will validate that the lab environment has properly configured with everything that is needed to successfully run the lab.
 
-## 💡 Disable the default vLLM inference serving
-Our `Lab 1 - inference with vllm` is quite computational intensive, so to ensure the success of following jupyterlab notebook, we recommend to disable the default vLLM inference serving in the namespace `llama-serving`.
+In JupyterLab, open the notebook: `0-validate-environment.ipynb`.
 
-To do that, first login into the OpenShift CLI using `--token` or username/password given by the instructor.
+Follow all instructions from inside the Notebook. if your environment has been provisioned correctly then you will see a result like the following:
 
-```bash
-oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.sno.${BASE_DOMAIN}:6443
-```
+![images/environment-is-ready.png](images/environment-is-ready.png)
 
-Once you login the `oc` CLI, run the following respectively to enable/disable the defautl model serving.
-
-```bash
-# undeploy deepseek-qwen3
-oc create configmap undeploy-sno-deepseek-qwen3-vllm -n llama-serving
-# redeploy deepseek-qwen3
-oc delete configmap undeploy-sno-deepseek-qwen3-vllm -n llama-serving
-
-# undeploy llama3-2-3b
-oc create configmap undeploy-llama3-2-3b -n llama-serving
-# redeploy llama3-2-3b
-oc delete configmap undeploy-llama3-2-3b -n llama-serving
-```
-
-Wait until the Pods are terminated before you continue with Lab 1.
+You are now ready to proceed to the next activity.
