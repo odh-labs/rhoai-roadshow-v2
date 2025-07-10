@@ -2,3 +2,4 @@ vllm==0.9.1
 llmcompressor==0.5.2
 pandas==2.3.0
 datasets==3.6.0
+lm-eval==0.4.7
