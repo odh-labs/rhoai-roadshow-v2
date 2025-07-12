@@ -9,6 +9,8 @@ if [ -f "${KUBECONFIG_F}" ]; then
     KUBECONFIG=${KUBECONFIG_F}
 fi
 
+export ACME_STAGING=${ACME_STAGING:-}
+
 cd ${WORK_DIR} && git clone https://github.com/eformat/rhoai-policy-collection.git
 cd ${WORK_DIR}/rhoai-policy-collection
 
