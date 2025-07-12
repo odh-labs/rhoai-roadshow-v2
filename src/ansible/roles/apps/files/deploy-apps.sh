@@ -21,7 +21,7 @@ login () {
     do
         echo -e "${GREEN}Waiting for 0 rc from oc commands.${NC}" 2>&1 | tee -a output.log
         ((i=i+1))
-        if [ $i -gt 100 ]; then
+        if [ $i -gt 200 ]; then
             echo -e "🕱${RED}Failed - oc login never ready?.${NC}" 2>&1 | tee -a output.log
             exit 1
         fi
