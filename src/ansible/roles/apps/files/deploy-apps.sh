@@ -74,7 +74,7 @@ echo "💥 Install apps" | tee -a output.log
 console_links
 
 # vault secret
-console_links
+vault_secret
 
 # setup vault
 echo "💥 Setup Vault" | tee -a output.log
