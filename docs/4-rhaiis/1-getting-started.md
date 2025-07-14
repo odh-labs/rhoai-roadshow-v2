@@ -2,19 +2,41 @@
 
 In this exercise we will configure the workbench that you will use for the lab. Follow the steps described in this document to configure the lab environment.
 
-# 1. Create a project
+# Access the environment
+Log into OpenShift AI using the credentials you have been provided.
 
-Login to OpenShift AI and click "create project". Give it a name "vllm-demo" and add "This project is to demo the Red Hat AI Inference Server (RHAIIS)" as description (Optional).
+# Create a project
 
-Click "Create".
+1. Click **Data science projects** in the navigation pane.  
+   OpenShift AI lists all of the existing projects.  
+
+2. Click **Create project**.  
+
+3. enter the follwing into the **Create project** form:  
+   **Name:** `vllm-demo`  
+   **Description:** `This project is to demo the Red Hat AI Inference Server (RHAIIS).`
 
 ![images/create-project.png](images/create-project.png)
 
-# 2. Create a workbench
-
-Select the `vllm-demo` data science project we just created, click `Create a workbench`.
+4. Click **Create**.  
+   OpenShift AI creates the new project and displays the project details.
 
 ![images/create-workbench.png](images/create-workbench.png)
+
+5. Click **Create a workbench** in the **Workbenches** group box.  
+   OpenShift AI displays a form to enter the workbench details.
+
+6. Enter the following details into the **Create workbench** form:
+   Name: **vllm**  
+   Image Selection: **CUDA**  
+   Version: **2025.1 (Recommended)**  
+   Hardware profile: **NVIDIA L4 (Shared)**  
+
+![images/create-workbench.png](images/create-workbench-2.png)
+
+7. Click **Create workbench**  
+
+
 
 We are going to use the following parameters:
 
@@ -24,47 +46,42 @@ We are going to use the following parameters:
    
 Leave all the rest as defaults. You should see the `Hardware profile` auto-selected to use the GPU Accelerator `Nvidida L4 (Shared)`.
 
-Click **`Create workbench`**.
+8. Click **Create workbench**.  
+   OpenShift AI create the Workbench.  
 
-OpenShift AI creates and starts the workbench.
-
-Wait until the status of workbench is changed to **`Running`**.
+9. Wait until the status of workbench **Status** changes to `Running`.
 
 ![images/workbench-ready.png](images/workbench-ready.png)
 
-The workbench has now been created. You will now open the workbench, which will launch **JupyterLab**, your IDE for the lab.  
+# Open the workbench
 
+10. In the **Workbenches** list, Click `vllm` in the **Name** column.  
+    OpenShift AI launches the Jupyter Notebook.  
 
-# 3. Open the Jupyter notebook
+11. Enter the **username** and **password** you were supplied for this lab.  
 
-1. Click **vllm** to open **JupyterLab**.  
-   In the login dialog box, enter the same credentials you used to log into OpenShift at the start of this lab.
-
-2. Click **Login**  
-   OpenShift AI launches JupyterLab.  
+12. Click **Login**.  
+    OpenShift AI launches JupyterLab. This will be the IDE thaat you use for the rest of the lab.
 
 ![images/jupyterlab-ready.png](images/jupyterlab-ready.png)
 
 With JupyterLab now running, you will now download all of the lab materials:  
 
-![images/clone-git-repo-1.png](images/clone-git-repo-1.png)
-
-3. Click **Clone a Repository**  
+13. Click **Clone a Repository**  
    OpenShift AI prompts you to enter the repositor URL and other options.  
 
-4. Paste the following URI text box: `https://github.com/odh-labs/rhoai-roadshow-v2.git`  
-5. Click **Include submodules**.  
+14. Copy and paste the following URI into the text box: `https://github.com/odh-labs/rhoai-roadshow-v2.git`  
+15. Click **Include submodules**.  
 
 ![images/clone-git-repo-2.png](images/clone-git-repo-2.png) 
 
-5. Click **Clone**.  
+16. Click **Clone**.  
 
 JupyterLab copies the source code from GitHub into your Workspace.
 
 ![images/clone-git-repo-3.png](images/clone-git-repo-3.png) 
 
-In the File Explorer panel, navigate to the directory:  
-`/rhoai-roadshow-v2/docs/4-rhaiis/notebook`  
+In the File Explorer panel, navigate to the directory:  `/rhoai-roadshow-v2/docs/4-rhaiis/notebook`    
 
 
 ![images/clone-git-repo-4.png](images/clone-git-repo-4.png)  

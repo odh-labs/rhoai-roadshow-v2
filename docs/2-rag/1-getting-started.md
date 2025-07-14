@@ -12,10 +12,10 @@ In this exercise we will configure the workbench that you will use for the lab. 
 
 2. Enter the folling details into the **Create workbench** form:
 
-    Name: **rag-workbench**  
-    Image Selection: **CUDA**  
-    Version: **2025.1 (Recommended)**  
-    Hardware profile: **NVIDIA L4 (Shared)**  
+   Name: **rag-workbench**  
+   Image Selection: **CUDA**  
+   Version: **2025.1 (Recommended)**  
+   Hardware profile: **NVIDIA L4 (Shared)**  
 
 ![./images/create-workbench-1.png](images/create-workbench-1.png)
 
