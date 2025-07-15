@@ -37,7 +37,7 @@ Log into OpenShift AI using the credentials you have been provided.
 7. Add some **environment variables** as below.  Please reflect to your own environment been created for your lab.
 ![images/environment-variables.png](images/environment-variables.png)
 
-9. Click **Create workbench**  
+8. Click **Create workbench**  
 
 
 
@@ -49,36 +49,36 @@ We are going to use the following parameters:
    
 Leave all the rest as defaults. You should see the `Hardware profile` auto-selected to use the GPU Accelerator `Nvidida L4 (Shared)`.
 
-8. Click **Create workbench**.  
+9. Click **Create workbench**.  
    OpenShift AI create the Workbench.  
 
-9. Wait until the status of workbench **Status** changes to `Running`.
+10. Wait until the status of workbench **Status** changes to `Running`.
 
 ![images/workbench-ready.png](images/workbench-ready.png)
 
 # Open the workbench
 
-10. In the **Workbenches** list, Click `vllm` in the **Name** column.  
+11. In the **Workbenches** list, Click `vllm` in the **Name** column.  
     OpenShift AI launches the Jupyter Notebook.  
 
-11. Enter the **username** and **password** you were supplied for this lab.  
+12. Enter the **username** and **password** you were supplied for this lab.  
 
-12. Click **Login**.  
+13. Click **Login**.  
     OpenShift AI launches JupyterLab. This will be the IDE thaat you use for the rest of the lab.
 
 ![images/jupyterlab-ready.png](images/jupyterlab-ready.png)
 
 With JupyterLab now running, you will now download all of the lab materials:  
 
-13. Click **Clone a Repository**  
+14. Click **Clone a Repository**  
    OpenShift AI prompts you to enter the repositor URL and other options.  
 
-14. Copy and paste the following URI into the text box: `https://github.com/odh-labs/rhoai-roadshow-v2.git`  
-15. Click **Include submodules**.  
+15. Copy and paste the following URI into the text box: `https://github.com/odh-labs/rhoai-roadshow-v2.git`  
+16. Click **Include submodules**.  
 
 ![images/clone-git-repo-2.png](images/clone-git-repo-2.png) 
 
-16. Click **Clone**.  
+17. Click **Clone**.  
 
 JupyterLab copies the source code from GitHub into your Workspace.
 
