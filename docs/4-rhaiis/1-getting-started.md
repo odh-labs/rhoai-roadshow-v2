@@ -34,7 +34,10 @@ Log into OpenShift AI using the credentials you have been provided.
 
 ![images/create-workbench.png](images/create-workbench-2.png)
 
-7. Click **Create workbench**  
+7. Add some **environment variables** as below.  Please reflect to your own environment been created for your lab.
+![images/environment-variables.png](images/environment-variables.png)
+
+9. Click **Create workbench**  
 
 
 
