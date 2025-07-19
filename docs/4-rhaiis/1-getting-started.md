@@ -34,10 +34,12 @@ Log into OpenShift AI using the credentials you have been provided.
 
 ![images/create-workbench.png](images/create-workbench-2.png)
 
-7. Click **Create workbench**  
-   OpenShift AI creates and starts the `vllm` **Workbench**.
+7. Add the **environment variables** as illustrated below.  Please reflect to your own environment been created for your lab.  *** REVISIT
+![images/environment-variables.png](images/environment-variables.png)
 
-8. Wait until the status of workbench **Status** changes to `Running`.
+7. Click **Create workbench**  
+   OpenShift AI proceeds to create the `vllm` **Workbench**.  
+   Monitor the **Status** of the workbench until it changes to `Running`.
 
 ![images/workbench-ready.png](images/workbench-ready.png)
 
