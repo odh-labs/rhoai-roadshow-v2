@@ -113,8 +113,7 @@ You will now deploy a validated model form the Red Hat Validated Model Repositor
 - **Demployment mode**: Advanced
 - **Number of model server replicas to deploy:** 1
 - **Hardware profile:** Nvidia L4 (Shared)
-- **Model route::Make deployed models available through an external route:** checked
-- **Model route::Require token authencation:** unchecked
+- **Model route::Make deployed models available through an external route:** unchecked
 - **Connection type:** `URI - v1`
 - **Connection name:** `granite-3.1-2b-instruct`
 - **URI:** `oci://quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-2b-instruct`
