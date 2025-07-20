@@ -4,7 +4,7 @@
 
 This guide walks through how to optimize open source models using vLLM's `llm-compressor` tool. You'll learn about quantization techniques, model memory requirements, and how to validate accuracy after optimization.
 
-Please go to `2-optimize-models.ipynb` to complete this lab.
+Please go to the notebook `2-optimize-models.ipynb` to complete this lab.
 
 ## Summary
 
