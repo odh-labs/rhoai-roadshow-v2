@@ -1,335 +1,175 @@
-# Lab 3: Red Hat Validated Models and Model Catalog
+# Lab 3: Red Hat Validated Models and Model Catelog
+### Recap:
+In the previous exercises we:
+- Demonstrated how Red Hat AI Inference Server (`vLLM`) increases model performance.  
+- Optimised an open source model from huggingface by quantising it to improve memory efficiency without sacrificing accuracy.  
 
-This walkthrough guide will teach you about Red Hat's validated models, the model catalog feature, and how to deploy models using modern approaches like KServe Modelcar.
+## Validated and Trusted Models
 
-## Prerequisites
+With the growing number of large language models (LLMs), inference server configurations, and hardware accelerator options available, it is important to evaluate the right combination for your needs. This ensures an optimal balance between trust, performance, accuracy, and cost for your specific use case.
 
-Before starting this walkthrough, ensure you have:
-- A running JupyterLab environment with GPU access
-- Access to the notebook `3-validated-models.ipynb`
-- Red Hat OpenShift AI environment
-- Internet connectivity for downloading packages and models
+To support this, Red Hat AI provides access to a repository of third-party models that are not only validated to run efficiently on the platform, but are also verified to come from known, trusted sources.
 
-## What You'll Learn
+These leading third-party models undergo capacity planning scenarios, helping you make informed decisions about the best combination of model, deployment settings, and hardware accelerator for your domain-specific use cases.
+### Red Hat AI repository on HuggingFace
+1. Click this link (**[Red Hat AI on Huggingface](https://huggingface.co/RedHatAI)**) to explore the Red Hat AI Hugging Face repository.  
 
-By completing this walkthrough, you'll understand:
-- What are Red Hat validated models and their benefits
-- How to access and use the Red Hat AI repository on HuggingFace
-- What is the Model Catalog feature and how to use it
-- How to deploy validated models on Red Hat OpenShift AI
-- Modern deployment approaches using KServe Modelcar
-- Features and benefits of optimized models
-
-## Understanding Red Hat Validated Models
-
-### What are Validated Models?
-
-Red Hat validated models are pre-tested, optimized, and verified models that have been extensively evaluated for performance, accuracy, and reliability. These models undergo rigorous testing and validation processes to ensure they meet enterprise standards.
-
-### Red Hat AI Repository on HuggingFace
-
-The Red Hat AI repository on Hugging Face is an open-source initiative backed by deep collaboration between IBM and Red Hat's research, engineering, and business units. We're committed to making AI more accessible, efficient, and community-driven from research to production.
-
-**🔗 Red Hat AI Repository**: https://huggingface.co/RedHatAI
+<img src="images/red-hat-hugging-face.png" style="width:50%;">  
 
 ### Features and Benefits
 
-Red Hat validated models offer several key advantages:
-
-- **Performance Optimization**: Models are optimized for inference speed and efficiency
-- **Quality Assurance**: Extensive testing ensures reliability and accuracy
-- **Enterprise Support**: Professional support and maintenance
-- **Security**: Models undergo security validation and compliance checks
-- **Compatibility**: Tested for compatibility with Red Hat OpenShift AI platform
-- **Documentation**: Comprehensive documentation and usage examples
-
+- **Increase flexibility** – Access a collection of validated and optimised models—hosted on Hugging Face—ready for inference. Reduce time to value, promote consistency, and improve the reliability of your AI applications.
+- **Optimised inference** – Optimise your AI infrastructure by selecting the right model, deployment settings, and hardware accelerators for a cost-effective and efficient deployment aligned with your enterprise use cases.
+- **Improved confidence** – Leverage industry benchmarks, accuracy evaluations, and model optimisation tools to evaluate, compress, and validate third-party models across various deployment scenarios.
 ### Validated Models
 
-Red Hat provides a curated selection of validated models including:
+These aren’t just any LLMs. Red Hat has tested third-party models using realistic scenarios to understand how they perform in real-world environments. Specialised tools are used to assess LLM performance across a range of hardware configurations.
 
-- **Language Models**: Large language models optimized for various use cases
-- **Code Generation**: Models specialized for code generation and completion
-- **Chat Models**: Conversational AI models for interactive applications
-- **Instruct Models**: Models fine-tuned for instruction following
-- **Quantized Models**: Memory-efficient versions with various precision levels
+- **GuideLLM** – Evaluates performance and cost across different hardware setups.
+- **LM Evaluation Harness** – Tests model generalisation across a variety of tasks.
 
-### Optimized Models
+<img src="images/llama-4-quantised.png" style="width:50%;">
 
-Red Hat AI also provides optimized versions of popular models:
+- **Evaluation and Recovery of Accuracy** – For each quantised model, Red Hat publishes detailed accuracy evaluation results alongside methods used to recover or preserve model accuracy after quantisation. This ensures that performance gains from compression do not come at the expense of model quality, helping you make informed trade-offs between efficiency and accuracy.
 
-- **Quantized Variants**: FP8, INT8, and INT4 quantizations for memory efficiency
-- **Compressed Models**: Using techniques like pruning and knowledge distillation
-- **Hardware-Specific**: Models optimized for specific hardware accelerators
-- **Multi-GPU Support**: Models configured for distributed inference
 
-## Deploy a Validated Model on Red Hat OpenShift AI
+<img src="images/llama-4-evaluation.png" style="width:50%;">
 
-### Step 1: Access the Model Catalog
+## Deploying models with Red Hat OpenShift AI
 
-Red Hat OpenShift AI provides a Model Catalog feature that makes it easy to discover, deploy, and manage validated models.
+Generally, managing models in production environments will leverage some trusted internal storage - typically **S3-compatible storage**.  
+The workflow involves steps such as: The AI/Data team will push the pretrained models into S3 bucket, then operations team builds up a data pipeline to pull the model and serve it using the built-in serving runtime.
 
-**📚 Model Catalog Features:**
-- Curated collection of validated models
-- One-click deployment options
-- Version management and updates
-- Integration with model registry
-- Performance metrics and monitoring
 
-### Step 2: Browse Available Models
+<img src="images/mlops-workflow.png" style="width:70%;">
 
-The Model Catalog contains two main categories:
+When it comes to serving a model, Red Hat OpenShift AI provides a variety of serving runtimes out of the box (**vLLM**, **OpenVINO**, **Caikit**, **LlamaCPP**, and more).  
+The following screenshot illustrates the out of the box model serving options:
 
-1. **Red Hat Models**: Validated and supported models from Red Hat AI
-2. **Third-party Models**: Community and partner models that have been validated
+<img src="images/serving-runtimes.png" style="width:70%;">
 
-### Step 3: Select and Deploy a Model
 
-To deploy a model from the catalog:
+💁🏼 If you need a different serving runtime then Red Hat OpenShift AI provides features to add your own.  
+### 🏆 A Modern way - KServe Modelcar approach
 
-1. Navigate to the Model Catalog in your OpenShift AI dashboard
-2. Browse or search for the desired model
-3. Click on the model to view details and specifications
-4. Review the model card, performance metrics, and requirements
-5. Click "Deploy" to start the deployment process
-6. Configure deployment parameters (resources, scaling, etc.)
-7. Monitor the deployment status and health
+#### Evolving Beyond S3 for Model Storage
 
-### Step 4: Model Configuration
+While S3 has traditionally been used to store models, it presents several limitations that create challenges for operations teams managing production AI systems:
 
-When deploying a model, you can configure:
+- Lack of model version control  
+- Complex access control  
+- Operational overhead  
+- Latency and performance concerns  
+- No metadata or lineage tracking  
 
-- **Resource Requirements**: CPU, memory, and GPU specifications
-- **Scaling Options**: Auto-scaling parameters and limits
-- **Network Configuration**: Endpoints and access controls
-- **Storage**: Persistent storage for model artifacts
-- **Environment Variables**: Custom configuration options
+Newer approaches now extend the benefits of container repositories to model storage, addressing these limitations. One such solution is **ModelCar**.
 
-## 🏆 A Modern Way - KServe Modelcar Approach
+**ModelCar** is not a new format for models. Instead, it acts as a wrapper around a model in its native format (such as PyTorch, ONNX, or TensorFlow), enabling the use of container-native tools for moving, versioning, and loading models quickly and efficiently.
 
-### What is KServe Modelcar?
+By using an OCI-compliant layout, ModelCar allows models to be stored in standard container registries and benefits from:
 
-KServe Modelcar is a modern, cloud-native approach to model serving that provides:
+- **Improved version control** – Treat models like code artifacts with clear versioning and immutability.  
+- **Simplified access control** – Leverage existing container registry security models for authentication and authorisation.  
+- **Operational consistency** – Align model distribution with existing CI/CD and DevSecOps practices.  
+- **Better traceability** – Embed metadata such as training provenance, evaluation scores, and deployment history directly within the model artifact.  
+- **Faster deployment** – Take advantage of optimised distribution mechanisms like layer caching and delta updates.  
 
-- **Serverless Scaling**: Automatic scaling based on demand
-- **Multi-Framework Support**: Support for various ML frameworks
-- **Advanced Routing**: Traffic splitting and canary deployments
-- **Monitoring Integration**: Built-in observability and metrics
-- **Version Management**: Easy model versioning and rollbacks
+Red Hat OpenShift AI (since v2.14) enables the ability of serving models directly from a **container** registry using **ModelCar**. Users are also able to deploy a ModelCar-based model directly from the dashboard.
 
-### Benefits of KServe Modelcar
-
-1. **Simplified Deployment**: Declarative model serving with minimal configuration
-2. **Cost Efficiency**: Pay-per-use scaling reduces infrastructure costs
-3. **High Availability**: Built-in fault tolerance and load balancing
-4. **Developer Experience**: Git-ops style model management
-5. **Production Ready**: Enterprise-grade features out of the box
-
-### Deploying with KServe Modelcar
-
-The KServe Modelcar approach uses a simple YAML configuration to define model serving:
-
-```yaml
----
-apiVersion: serving.kserve.io/v1alpha1
-kind: ServingRuntime
-metadata:
-  annotations:
-    enable-route: 'true'
-    opendatahub.io/accelerator-name: nvidia-gpu
-    opendatahub.io/apiProtocol: REST
-    opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
-    opendatahub.io/template-display-name: vLLM ServingRuntime for KServe
-    opendatahub.io/template-name: vllm-runtime
-    openshift.io/display-name: sno-granite-8b-lab-v2-vllm
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "4"
-  labels:
-    opendatahub.io/dashboard: "true"
-  name: sno-granite-8b-lab-v2-vllm
-  namespace: llama-serving
-spec:
-  annotations:
-    prometheus.io/path: /metrics
-    prometheus.io/port: "8080"
-  containers:
-    - command:
-        - python
-        - -m
-        - vllm.entrypoints.openai.api_server
-        - --port=8080
-        - --model=/mnt/models
-        - --served-model-name=granite-8b-lab-v2-preview
-        - --max-model-len=35000
-        - --enforce-eager
-        - --gpu_memory_utilization=0.99
-        - --enable-auto-tool-choice
-        - --tool-call-parser=granite
-        - --chat-template=/app/data/template/tool_chat_template_granite.jinja
-      env:
-        - name: HF_HOME
-          value: /tmp/hf_home
-      image: quay.io/eformat/vllm:latest  # quay.io/modh/vllm:rhoai-2.21-cuda
-      name: kserve-container
-      ports:
-        - containerPort: 8080
-          protocol: TCP
-  multiModel: false
-  supportedModelFormats:
-    - autoSelect: true
-      name: vLLM
----
-apiVersion: serving.kserve.io/v1beta1
-kind: InferenceService
-metadata:
-  annotations:
-    openshift.io/display-name: sno-granite-8b-lab-v2-vllm
-    serving.knative.openshift.io/enablePassthrough: "true"
-    sidecar.istio.io/inject: "true"
-    sidecar.istio.io/rewriteAppHTTPProbers: "true"
-    serving.kserve.io/deploymentMode: Serverless
-    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
-    argocd.argoproj.io/sync-wave: "4"
-  labels:
-    opendatahub.io/dashboard: "true"
-  name: sno-granite-8b-lab-v2-vllm
-  namespace: llama-serving
-spec:
-  predictor:
-    maxReplicas: 1
-    minReplicas: 1
-    model:
-      modelFormat:
-        name: vLLM
-      name: ''
-      resources:
-        limits:
-          nvidia.com/gpu: "1"
-        requests:
-          nvidia.com/gpu: "1"
-      runtime: sno-granite-8b-lab-v2-vllm
-      storageUri: oci://registry.redhat.io/rhelai1/modelcar-granite-8b-lab-v2-preview:1.4.0
-    tolerations:
-    - effect: NoSchedule
-      key: nvidia.com/gpu
-      operator: Exists
----
-kind: Secret
-apiVersion: v1
-metadata:
-  name: modelcar-granite-8b-lab-v2-preview
-  namespace: llama-serving
-  labels:
-    opendatahub.io/dashboard: 'true'
-  annotations:
-    opendatahub.io/connection-type-ref: uri-v1
-    openshift.io/description: modelcar-granite-8b-lab-v2-preview
-    openshift.io/display-name: modelcar-granite-8b-lab-v2-preview
-    argocd.argoproj.io/sync-wave: "2"
-stringData:
-  URI: oci://registry.redhat.io/rhelai1/modelcar-granite-8b-lab-v2-preview:1.4.0
-type: Opaque
-```
-
-### Model Catalog Integration
-
-The Model Catalog integrates seamlessly with KServe Modelcar by:
-
-1. **Automated Configuration**: Generating KServe configurations from model metadata
-2. **Resource Optimization**: Recommending optimal resource allocations
-3. **Dependency Management**: Handling model dependencies and requirements
-4. **Monitoring Setup**: Configuring observability and alerting
-5. **Security Policies**: Applying security and compliance policies
-
-## 💡 Model Catalog Deep Dive
-
-### Key Features
-
-The Model Catalog provides several advanced features:
-
-1. **Model Discovery**: Search and filter models by various criteria
-2. **Metadata Management**: Rich metadata including performance metrics
-3. **Version Control**: Track model versions and lineage
-4. **Deployment Templates**: Pre-configured deployment templates
-5. **Resource Estimation**: Automatic resource requirement calculation
-6. **Compatibility Checks**: Validate model compatibility with your environment
-
-### Using the Model Catalog
-
-To effectively use the Model Catalog:
-
-1. **Browse Collections**: Explore curated model collections
-2. **Read Model Cards**: Review detailed model documentation
-3. **Check Performance**: Analyze benchmark results and metrics
-4. **Verify Compatibility**: Ensure model fits your requirements
-5. **Deploy Easily**: Use one-click deployment options
-6. **Monitor Performance**: Track model performance post-deployment
-
-### Best Practices
-
-When working with the Model Catalog:
-
-- **Start Small**: Begin with smaller models to test your pipeline
-- **Review Documentation**: Always read model cards and documentation
-- **Test Thoroughly**: Validate model performance in your environment
-- **Monitor Resources**: Track resource usage and costs
-- **Keep Updated**: Regularly update to newer model versions
-- **Plan for Scale**: Design for production-level traffic
-
-## Advanced Features
-
-### Model Registry Integration
-
-The Model Catalog integrates with the Model Registry to provide:
-
-- **Version Management**: Track model versions and metadata
-- **Lineage Tracking**: Understand model development history
-- **Approval Workflows**: Implement governance and approval processes
-- **Audit Trails**: Maintain compliance and audit records
-- **Collaboration**: Enable team collaboration on model development
-
-### Monitoring and Observability
-
-Red Hat OpenShift AI provides comprehensive monitoring for deployed models:
-
-- **Performance Metrics**: Latency, throughput, and resource utilization
-- **Model Metrics**: Accuracy, drift detection, and data quality
-- **Business Metrics**: Custom metrics for business KPIs
-- **Alerting**: Automated alerts for anomalies and issues
-- **Dashboards**: Pre-built and custom dashboards for visualization
-
-### Security and Compliance
-
-Validated models come with built-in security features:
-
-- **Vulnerability Scanning**: Regular security scans and updates
-- **Access Controls**: Role-based access and permissions
-- **Encryption**: Data encryption in transit and at rest
-- **Compliance**: Meet industry standards and regulations
-- **Audit Logging**: Comprehensive audit trails
-
-## Summary
-
-Red Hat validated models and the Model Catalog provide a powerful platform for deploying production-ready AI models. Key benefits include:
-
-- **Simplified Deployment**: Easy-to-use catalog and deployment tools
-- **Enterprise Ready**: Validated, supported, and secure models
-- **Modern Architecture**: Cloud-native serving with KServe
-- **Cost Effective**: Efficient resource utilization and scaling
-- **Comprehensive Monitoring**: Full observability and management
-
-The combination of validated models, modern serving infrastructure, and comprehensive tooling makes Red Hat OpenShift AI an ideal platform for enterprise AI deployment.
-
-## Next Steps
-
-After completing this walkthrough, consider:
-
-1. **Explore More Models**: Try different models from the catalog
-2. **Optimize Performance**: Experiment with quantized and optimized models
-3. **Implement Monitoring**: Set up comprehensive monitoring and alerting
-4. **Scale to Production**: Plan for production-level deployments
-5. **Integrate with Applications**: Connect models to your applications
-6. **Learn Advanced Features**: Explore advanced serving and management features
+<img src="images/model-serving-architecture.png" style="width:70%;">
 
 ---
+## Exercise: Deploy a validated model on Red Hat OpenShift AI
+You will now deploy a validated model form the Red Hat Validated Model Repository on Hugging Face to Red Hat OpenShift AI. 
 
-This completes Lab 3 - Red Hat Validated Models and Model Catalog. You now have the knowledge and tools to effectively deploy and manage validated models in your Red Hat OpenShift AI environment. 
+1. Click **Data science projects** in the Explorer.
+2. Type **vllm-demo** in the *Filter* text box.  
+
+<img src="images/select-project.png" style="width:70%;">
+
+3. Click the **`vllm-demo`** project.  
+   OpenShift AI opens the project and displays the project overview screen.
+
+<img src="images/project-overview.png" style="width:70%;">
+
+3. Click **Models** in the *project toolbar*.
+
+<img src="images/model-server-list.png" style="width:70%;">
+
+4. Click **Select single model** in the *Single-model serving platform* tile.  
+   OpenShift AI displays a list of existing model deployments (there are none currently).
+
+<img src="images/deploy-model-1.png" style="width:70%;">
+
+5. Click **Deploy model**  
+   OpenShift AI prompts you to complete the deployment details.
+
+<img src="images/deploy-model-2.png" style="width:70%;">
+
+6. Enter the following information into the *Deployment Details* form:
+- **Model deployment name:** `granite-3.1-2b-instruct`  
+ ⚠️ **Note:** The model has to be on the ModelCar catalog at https://github.com/redhat-ai-services/modelcar-catalog
+- **Serving runtime:** `vLLM NVIDIA GPU ServingRuntime for KServe`
+- **Demployment mode**: Advanced
+- **Number of model server replicas to deploy:** 1
+- **Hardware profile:** Nvidia L4 (Shared)
+- **Model route::Make deployed models available through an external route:** checked
+- **Model route::Require token authencation:** unchecked
+- **Connection type:** `URI - v1`
+- **Connection name:** `granite-3.1-2b-instruct`
+- **URI:** `oci://quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-2b-instruct`
+
+7. Review the form details are correct.
+8. Click **Deploy**
+   OpenShift AI downloads the model from the Red Hat public repository and proceeds to deploy it on your cluster.
+   
+9. Wait until the Status turns to ✅.
+
+   **⚠️The deployment process can take up to 10 mins to complete for the first time.**  
+
+<img src="images/deploy-model-3.png" style="width:70%;">
+
+## 💡 Simplifying model deployments with the OpenSHift AI Model Catalog
+
+OpenShift AI provides an integrated model catalog that contains all of the Red Hat validated models on Hugging Face. This catalog removes the need to search Hugging Face and simplifies obtaining trusted and validated models.
+
+We have made this even easier by introducing **📚 Model Catalog** and **🗃️ Model Registry**.
+
+### 📚Model Catalog
+The Model Catalog serves as a centralised repository where data scientists can discover, register, and manage ML models.  
+The catalog contents are both Red Hat validated models as well as common and popular third-party models that Red Hat has verified toe provinance.
+
+<img src="images/model-catalog.png" style="width:70%;">
+
+### 🗃️ Model Registry
+The Model Registry acts as the backend storage system for ML models, offering structured management and version control.  
+### Exercise: Deploy a model from the OpenShift AI Model Catalog
+
+In this activity you will dpeloy a model from the *Model Catalog.*
+1. Click **Models > Model catalog** in the OpenShift AI Explorer panel
+   OpenShift AI displays the *Model Catalog.*
+2. Click the **Llama-3.1-8B-Instruct-quantized.w4a16** model tile.
+   OpenShift AI displays the model details page.
+
+<img src="images/model-catalog-2.png" style="width:70%;">
+
+3. Click the `Deploy Model` button  
+   OpenShift AI prompts to select the project to deploy the model into.  
+4. Click the **Project** drop-down list box.  
+   OpenShift AI displays a list of all projects.  
+5. Type **vllm** in the *list-box search* text box and press **Enter.**  
+   OpenShift AI displays the *vllm-demo* project.  
+
+<img src="images/model-catalog-3.png" style="width:70%;">
+
+6. Click **vllm-demo**  
+   OpenShift AI displays the *model deployment* form.  
+7. Enter the following details while leaving all other values as their defaults:  
+   - **Serving runtime:** vLLM NVIDIA GPU ServingRuntime for KServe  
+
+<img src="images/model-catalog-4.png" style="width:70%;">
+
+ 8. Click the **Deploy** button.
+   OpenShift AI deploys the model
+---
+This is the end of Lab 3 - Validated models.
