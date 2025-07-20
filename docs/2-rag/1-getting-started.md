@@ -66,7 +66,7 @@ The workbench has now been created. You will now open the workbench, which will 
 
 ![./images/jupyter-lab.png](images/jupyter-lab.png)
 
-With JupyterLabnow running, you will now download all of the lab materials:  
+With JupyterLab now running, you will now download all of the lab materials:  
 3. Click **Clone a Repository**  
    OpenShift AI prompts you to enter the repositor URL and other options.  
 
