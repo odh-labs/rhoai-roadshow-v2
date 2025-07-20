@@ -1,6 +1,6 @@
 # Validate the Lab Environment
 
-In this exercise you will validate that the lab environment has properly configured with everything that is needed to successfully run the lab.
+Npw that you are connected to your workbench, you will validate that the lab environment has properly configured with everything that is needed to successfully run the lab.
 
 In JupyterLab, open the notebook: `2-validate-environment.ipynb`.
 
@@ -9,6 +9,4 @@ Follow all instructions from inside the Notebook. If your environment has been p
 ![images/validate-env-1.png](images/validate-env-1.png) 
 
 
-You are now ready to proceed to the next activity.
-
-
+When done, you can close the notebook and head to the next page.
