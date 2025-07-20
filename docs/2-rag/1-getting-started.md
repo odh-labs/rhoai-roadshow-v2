@@ -87,4 +87,4 @@ In the File Explorer panel, navigate to the directory:
 
 ![images/clone-git-repo-4.png](images/clone-git-repo-4.png)  
 
-You are now ready to move on to the next section.
+When done, you can close the notebook and head to the next page.
