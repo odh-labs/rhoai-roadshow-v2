@@ -9,26 +9,37 @@ if [ -f "${KUBECONFIG_F}" ]; then
     KUBECONFIG=${KUBECONFIG_F}
 fi
 
+export ACME_STAGING=${ACME_STAGING:-}
+
 cd ${WORK_DIR} && git clone https://github.com/eformat/rhoai-policy-collection.git
 cd ${WORK_DIR}/rhoai-policy-collection
 
 echo "💥 Working directory is: $(pwd)" | tee -a output.log
 
-# bootstrap operators
-kustomize build --enable-helm gitops/bootstrap | oc apply -f-
-if [ "$?" != 0 ]; then
-    echo -e "🚨${RED}Failed - to run boostrap operators ?${NC}"
-    exit 1
-else
-    echo "🌴 boostrap operators ran OK"
-fi
+bootstrap_operators() {
+    echo "💥 Running Bootstrap Operators ..." | tee -a output.log
+    local i=0
+    kustomize build --enable-helm gitops/bootstrap | oc apply -f-
+    until [ "${PIPESTATUS[1]}" == 0 ]
+    do
+        echo -e "${GREEN}Waiting for 0 rc from oc commands.${NC}" | tee -a output.log
+        ((i=i+1))
+        if [ $i -gt 100 ]; then
+            echo -e "🕱${RED}Failed - oc never ready?.${NC}" | tee -a output.log
+            exit 1
+        fi
+        sleep 15
+        kustomize build --enable-helm gitops/bootstrap | oc apply -f-
+    done
+    echo "💥 Bootstrap Operators Done" | tee -a output.log
+}
+bootstrap_operators
 
-# bootstrap cr
 bootstrap_cr() {
     echo "💥 Running Bootstrap CR ..." | tee -a output.log
     local i=0
     oc apply -f gitops/bootstrap/setup-cr.yaml | tee -a output.log
-    until [ "$?" == 0 ]
+    until [ "${PIPESTATUS[0]}" == 0 ]
     do
         echo -e "${GREEN}Waiting for 0 rc from oc commands.${NC}" | tee -a output.log
         ((i=i+1))

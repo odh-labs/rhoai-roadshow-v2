@@ -1,58 +1,31 @@
-# Introduction
+# RHAIIS - Red Hat AI Inference Server
 
-## Create a project
+The modern high performance LLM serving engine - Red Hat AI Inference Server & vLLM.
 
-Login to OpenShift AI and click "create project". Give it a name "vllm-demo" and add "This project is to demo the Red Hat AI Inference Server (RHAIIS)" as description (Optional).
+## What is it?
+The Red Hat AI Inference Server is a powerful, enterprise-grade solution for serving large language models. It is built on the open-source vLLM library, a state-of-the-art engine for LLM inference and serving.
 
-Click "Create".
+At its core, the server is designed to make the process of deploying and running LLMs as efficient as possible. It abstracts away the complexities of the underlying hardware and provides a simple, consistent API for developers to interact with. Red Hat's involvement ensures that the server is well-supported, secure, and can be integrated seamlessly into existing enterprise workflows and platforms like Red Hat OpenShift.
 
-![images/create-project.png](images/create-project.png)
+## Why it's important?
+In the rapidly evolving world of Generative AI, deploying large language models (LLMs) efficiently is a significant challenge. As models become more powerful, they also become more resource-intensive, leading to high operational costs and slow response times. This is where vLLM and the Red Hat AI Inference Server come in.
 
-## Create a workbench
+The key benefits are:
+* **Maximized GPU Utilization** - Traditional inference methods often underutilize expensive GPU resources. The server, powered by vLLM, employs a novel memory management technique called PagedAttention to minimize memory waste and fragmentation. This allows for higher batch sizes and, consequently, better throughput.
+* **Faster Response Times** - By optimizing GPU usage and reducing memory overhead, the inference server can process requests much faster. This is crucial for real-time applications where low latency is a priority.
+* **Open Source and Flexible** - The open-source nature of vLLM means it can support a wide range of generative AI models and can be deployed on various AI accelerators across different cloud environments. This prevents vendor lock-in and provides greater flexibility.
+* **Enterprise-Ready** - Red Hat provides the stability, security, and support that enterprises need to deploy AI models in production environments.
+* **Red Hat Validated Models** - Red Hat AI provides access to a repository of third-party models that are validated to run efficiently across the platform. This set of leading third-party models are run through capacity guidance planning scenarios, so you can make informed decisions about the right combination of model, deployment settings, and hardware accelerator for your domain specific use cases.
 
-Select the `vllm-demo` data science project we just created, click `Create a workbench`.
+## Hands-on Lab
+In this module, we will walk you through the key features of Red Hat AI Inference Server.
 
-![images/create-workbench.png](images/create-workbench.png)
+![rhaiis-overview.png](images/rhaiis-overview.png)
 
-We are going to `Create a workbench` using the following parameters:
+**Agenda:**
 
-    Name: vllm
-    Image Selection: CUDA
-    Version: 2025.1 (select the latest version)
-   
-Leave all the other fields as defaults. You should see the `Hardware profile` auto-selected to use the GPU Accelerator `Nvidida L4 (Shared)`.
-
-Click `Create workbench`.
-
-Wait until the status of workbench is changed to `Running`.
-
-![images/workbench-ready.png](images/workbench-ready.png)
-
-Click the name of the workbench `vllm`, and it will bring you to JupyterLab web console as below.
-![images/jupyterlab-ready.png](images/jupyterlab-ready.png)
-
-
- ## 💡 Disable the default vLLM inference serving
-Our `Lab 1 - inference with vllm` is quite computational intensive, so to ensure the success of following jupyterlab notebook, we recommend to disable the default vLLM inference serving in the namespace `llama-serving`.
-
-To do that, first login into the OpenShift CLI using `--token` or username/password given by the instructor.
-
-```bash
-oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.sno.${BASE_DOMAIN}:6443
-```
-
-Once you login the `oc` CLI, run the following respectively to enable/disable the defautl model serving.
-
-```bash
-# undeploy deepseek-qwen3
-oc create configmap undeploy-sno-deepseek-qwen3-vllm -n llama-serving
-# redeploy deepseek-qwen3
-oc delete configmap undeploy-sno-deepseek-qwen3-vllm -n llama-serving
-
-# undeploy llama3-2-3b
-oc create configmap undeploy-llama3-2-3b -n llama-serving
-# redeploy llama3-2-3b
-oc delete configmap undeploy-llama3-2-3b -n llama-serving
-```
-
-Wait until the Pods are terminated before you continue with Lab 1.
+* 📍 [Getting started - configure the lab workbench](1-getting-started.md)
+* 📍 [Validate the lab environment](2-shakeout-test.md)
+* 📍 [Inference with vLLM](3-inference-with-vllm.md)
+* 📍 [Optimize the models](4-optimize-models.md)
+* 📍 [Red Hat Validated Models](5-validated-models.md)
