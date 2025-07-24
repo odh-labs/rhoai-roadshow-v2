@@ -27,6 +27,10 @@
 
 🦩🦩 こんにちは 🦩🦩
 
+#### **Chinese**
+
+🐼 你好 🐼
+
 <!-- tabs:end -->
 
 Welcome the the RHOAI Roadshow. Each of the modules is self-contained so can be run on the provided environment separately.
