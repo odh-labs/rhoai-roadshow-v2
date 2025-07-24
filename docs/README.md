@@ -37,6 +37,8 @@ Welcome the the RHOAI Roadshow. Each of the modules is self-contained so can be 
 
 You get to choose the adventure you wish to explore Red Hat OpenShift AI with.
 
+?> **Note** All images have _lightbox_ attached to them so they can overlay on top of the web page so you can see them. Just click on them ! (and click to minimize again)
+
 ?> **Tip** Be sure to set your cluster domain in the top navigation bar and hit `Save` - this updates the documentation hyperlinks to point to your cluster.
 
 ![images/top-nav-bar.png](images/top-nav-bar.png)
