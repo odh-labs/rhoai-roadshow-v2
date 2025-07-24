@@ -30,7 +30,6 @@
     document.getElementById("cdomain").value = localStorage.getItem('CLUSTER_DOMAIN') ? localStorage.getItem('CLUSTER_DOMAIN') : '';
 
     function setNamesInStorage () {
-      let tname = document.getElementById('tname').value.toLowerCase();
       let cdomain = (document.getElementById('cdomain').value.toLowerCase().indexOf('https://') > -1) 
                     ? document.getElementById('cdomain').value.toLowerCase().substring(8) 
                     : document.getElementById('cdomain').value.toLowerCase();
@@ -41,7 +40,7 @@
         return;
       }
 
-      console.info('INFO - setting team, cluster to :', tname, cdomain);
+      console.info('INFO - setting cluster to :', cdomain);
       localStorage.setItem('CLUSTER_DOMAIN', cdomain);
       location.reload();
     }
@@ -49,7 +48,6 @@
     function clearStorage () {
       console.info('INFO - clearing team and cluster');
       localStorage.removeItem('CLUSTER_DOMAIN');
-      document.getElementById('tname').value = '';
       document.getElementById('cdomain').value = '';
       location.reload();
     }
