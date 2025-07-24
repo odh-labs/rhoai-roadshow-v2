@@ -2,8 +2,7 @@
 
 This lab will walk you through how to serve an open-source model using vLLM (the upstream project of Red Hat AI Inference Server) and test its performance through benchmarking.
 
-Please go to the notebook `1-inference-with-vllm.ipynb` to complete this lab.
-
+Please go to the notebook In JupyterLab, open the notebook: <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/4-rhaiis/notebooks/1-inference-with-vllm.ipynb" target="_blank">1-inference-with-vllm.ipynb</a> to complete this lab.
 
 ## Summary
 
