@@ -1,7 +1,6 @@
 # Red Hat OpenShift AI Roadshow II
 This repo contains a revised OpenShift AI Roadshow v2 - half-day customer event.
 
-# TL;DR (a.k.a get going now)
 The instructions for the workshop are located under the `docs` directory.  
 To start the document server, follow the instructions [here](https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/site/README.md).
 
@@ -11,7 +10,7 @@ It will be relevant to the kinds of problems that teams want to do with generati
 
 # Target audience
 The roadshow will provide value to multiple personas:
-1. Platform engineers that need to provide:  
+1. Platform engineers that need to provide:
    a. The software infrastructure that data scientists and application developers need to build intelligent applications  
    b. Model as a service or GPU as a service to their internal customers.  
 3. Data scientists and data engineers and domain experts that need to prepare data for training of RAG-based solutions, and validate their performance.
@@ -24,7 +23,7 @@ The roadshow will provide value to multiple personas:
 # Roadshow format
    * Self contained labs designed to showcase a defined set of RHOCPAI features and noteworthy patterns that everyone is excited about.
    * Modules not interconnected.
-   * Delivery format: Based on the ML500 course.
+   * Delivery format: Based on the TL500/ML500 course.
    * Labs timeboxed to an hour max each
    * "Follow the bouncing ball" style
 
