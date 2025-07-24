@@ -14,7 +14,7 @@ If you are intersted in how to configure LLamaStack, checkout the [docs](https:/
 
 ## Models
 
-We have three models configured in LLamaStack. Two of them are available to `Chat` to i.e. are type `llm` in the model dropdown. The third model is an embedding model.
+We have three models configured in LLamaStack. Two of them are available to `Chat` to i.e. are type `llm` in the model dropdown. The third model is an `embedding` model.
 
 ```yaml
 models:
