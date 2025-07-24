@@ -32,7 +32,6 @@
 
   <script>
 
-    document.getElementById("tname").value = localStorage.getItem('TEAM_NAME') ? localStorage.getItem('TEAM_NAME') : '';
     document.getElementById("cdomain").value = localStorage.getItem('CLUSTER_DOMAIN') ? localStorage.getItem('CLUSTER_DOMAIN') : '';
 
     function setNamesInStorage () {
@@ -42,24 +41,18 @@
                     : document.getElementById('cdomain').value.toLowerCase();
 
       // Check inputs
-      if (tname == '') {
-        alert('Please enter a team name');
-        return;
-      }
       if (cdomain == '') {
         alert('Please enter a cluster domain');
         return;
       }
 
       console.info('INFO - setting team, cluster to :', tname, cdomain);
-      localStorage.setItem('TEAM_NAME', tname);
       localStorage.setItem('CLUSTER_DOMAIN', cdomain);
       location.reload();
     }
 
     function clearStorage () {
       console.info('INFO - clearing team and cluster');
-      localStorage.removeItem('TEAM_NAME');
       localStorage.removeItem('CLUSTER_DOMAIN');
       document.getElementById('tname').value = '';
       document.getElementById('cdomain').value = '';
@@ -97,10 +90,8 @@
         function(hook) {
           hook.beforeEach(function(content) {
             // Invoked each time before parsing the Markdown file.
-            const teamName = localStorage.getItem('TEAM_NAME') ? localStorage.getItem('TEAM_NAME') : '<TEAM_NAME>';
             const clusterDomain = localStorage.getItem('CLUSTER_DOMAIN') ? localStorage.getItem('CLUSTER_DOMAIN') : '<CLUSTER_DOMAIN>';
-            return content.replaceAll('<TEAM_NAME>', teamName)
-                    .replaceAll('<CLUSTER_DOMAIN>', clusterDomain);
+            return content.replaceAll('<CLUSTER_DOMAIN>', clusterDomain);
           });
 
           var footer = [
