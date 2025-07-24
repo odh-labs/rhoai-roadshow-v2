@@ -1,6 +1,4 @@
 * [Cover](/)
-* [Data Engineering](1-data-engineering/README.md)
-  * [🤸‍♀️ Introduction](1-data-engineering/1-intro.md)
 * [RAG](2-rag/README.md)
   * [🔭 Introduction](2-rag/0-intro.md)
   * [🌌 Getting started - configure the lab workbench](2-rag/1-getting-started.md)
@@ -30,5 +28,3 @@
   * [🥡 Deploy a new GPU workload](6-gpuaas/3-new-gpu-workload.md)
   * [📡 Advanced GPUaaS with Kueue](6-gpuaas/4-advanced-gpuaas.md)
   * [🎁 Inference Multi GPU + Multi Node](6-gpuaas/5-gpuaas-multi-gpu-node.md)
-* [Platform](7-platform/README.md)
-  * [💻 Introduction](7-platform/1-intro.md)
