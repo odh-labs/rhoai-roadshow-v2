@@ -51,11 +51,14 @@ Add the following `Environment Variables` to your workbench.
     ADMIN_PASSWORD: your OpenShift admin password
     BASE_DOMAIN: your OpenShift lab base domain e.g sandbox.opentlc.com
 
-
 ![images/workbench-env-vars.png](images/workbench-env-vars.png)
 
 Leave all the other fields as defaults. You should see the `Hardware profile` auto-selected to use the GPU Accelerator `Nvidida L4 (Shared)`.
 
 ![images/cuda-workbench.png](images/cuda-workbench.png)
 
-Select `Create workbench`.
+Select `Create workbench`. It may take a few minutes to pull the workbench image for the first time.
+
+Open and login to your `gpuaas` workbench (click the arrow in a box next to `gpuaas`)
+
+![images/open-cuda-workbench.png](images/open-cuda-workbench.png)
