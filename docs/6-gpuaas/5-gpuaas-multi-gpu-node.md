@@ -8,6 +8,8 @@ git clone https://github.com/odh-labs/rhoai-roadshow-v2
 
 ![images/clone-code.png](images/clone-code.png)
 
+Go into the `rhoai-roadshow-v2` folder and open the top level `6-gpuaas.jupyterlab-workspace` workspace.
+
 Open up the following notebook in your workspace.
 
 <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/6-gpuaas/notebooks/Level5_multi-gpu-node.ipynb" target="_blank">Level5_multi-gpu-node.ipynb</a>
