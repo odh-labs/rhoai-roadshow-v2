@@ -99,4 +99,4 @@ With JupyterLab now running, you will now download all of the lab materials:
 
 ![images/clone-git-repo-4.png](images/clone-git-repo-5.png)  
 
-When done. You have successfully connected to your environment. Head back to the lab materials for further instructions.
+When done, you have successfully connected to your environment and this completes this activity. Click the link below to move to the next activity 'Validate the lab environment'.
