@@ -2,7 +2,7 @@
 * [RAG](2-rag/README.md)
   * [🔭 Introduction](2-rag/0-intro.md)
   * [🌌 Getting started - configure the lab workbench](2-rag/1-getting-started.md)
-  * [☑️ Validate the lab environment](2-rag/2-shakeout-test.md)
+  * [☑️ Validate the lab environment](2-rag/2-validate-environment.md)
   * [📄 Introduction to vector databases](2-rag/3-vector-databases.md)
   * [🤘 A simple RAG implementation](2-rag/4-simple-rag.md)
   * [🎗️ Extending the RAG application with metadata](2-rag/5-extended-rag.md)

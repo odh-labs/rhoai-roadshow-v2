@@ -1,20 +1,12 @@
-# RAG Module – Document Ingestion  
-Prepare enterprise documents for Retrieval-Augmented Generation by converting PDFs to text, creating embeddings, and loading them into Milvus on OpenShift AI. :contentReference[oaicite:0]{index=0}
+# Retrieval Augmented Generation (RAG)
 
-## What is it?
-This notebook is the first step in the RAG lab series. It shows you how to:  
-* connect to a MinIO/S3 object store and retrieve a PDF,  
-* parse the PDF into clean, chunk-sized text with **Docling**,
-* generate 1 536-dimension semantic embeddings using the `text-embedding-3-small` model from OpenAI, and  
-* store those embeddings in a **Milvus** vector collection for similarity search. :contentReference[oaicite:1]{index=1}
+In this activity, you will learn how to build a Retrieval-Augmented Generation (RAG) application using OpenShift AI. After setting up and validating your lab environment, you will begin by exploring vector databases and understanding how they retrieve relevant information from documents. Next, you will implement a simple RAG solution that demonstrates how large language models (LLMs) generate rich responses using results from vector searches. Finally, you will examine how metadata enables traceability from generated answers back to the original source documents.
 
-## Why it’s important
-Efficient document ingestion is the foundation of any RAG pipeline: without high-quality chunks and embeddings, downstream retrieval will be slow, inaccurate, or both. Automating this step inside an OpenShift AI workspace lets data scientists repeat the process for thousands of PDFs while keeping sensitive content inside the cluster. :contentReference[oaicite:2]{index=2}
+Click **Introduction** to get started.
 
-## Hands-on Lab
-Follow the notebook to complete the workflow end-to-end.
-
-> **Estimated time:** 15 – 20 minutes  
-> **Prerequisites:** An OpenShift AI Workbench project with network access to both OpenAI and your MinIO instance, plus a valid OpenAI API key.
-
-Once completed, your PDF is available for low-latency, semantic retrieval in the subsequent RAG Question-Answering notebook.
+  * [🔭 Introduction](2-rag/0-intro.md)
+  * [🌌 Getting started - configure the lab workbench](2-rag/1-getting-started.md)
+  * [☑️ Validate the lab environment](2-rag/2-validate-environment.md)
+  * [📄 Introduction to vector databases](2-rag/3-vector-databases.md)
+  * [🤘 A simple RAG implementation](2-rag/4-simple-rag.md)
+  * [👷‍♂️ Extending the RAG application with metadata](2-rag/5-extended-rag.md)
