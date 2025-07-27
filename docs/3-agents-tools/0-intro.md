@@ -14,7 +14,7 @@ If you are intersted in how to configure LLamaStack, checkout the [docs](https:/
 
 ## Models
 
-We have four models configured in LLamaStack. Three of them are available to `Chat` to i.e. are type `llm` in the model dropdown. The third model is an `embedding` model.
+We have four models configured in LLamaStack. Three of them are available to `Chat` to i.e. are type `llm` in the model dropdown. The other model is an `embedding` model used to create vector embeddings for RAG.
 
 ```yaml
 models:
