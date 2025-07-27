@@ -9,7 +9,7 @@ Your instructor will supply you with a link that you will use to login to your O
 1. Open the OpenShift AI console using the url provided by your instructor.  
 2. Use the following credentials to login to OpenShift AI:  
       **Username:** *admin*  
-      **Password:** *r3dh4t*
+      **Password:** *password*
 
 # Create a workbench
 
