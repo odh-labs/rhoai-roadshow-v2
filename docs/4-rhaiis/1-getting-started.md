@@ -26,7 +26,7 @@ Log into OpenShift AI using the credentials you have been provided.
 5. Click **Create a workbench** in the **Workbenches** group box.  
    OpenShift AI displays a form to enter the workbench details.
 
-6. Enter the following details into the **Create workbench** form:
+6. Enter the following details into the **Create workbench** form:   
    Name: **vllm**  
    Image Selection: **CUDA**  
    Version: **2025.1 (Recommended)**  
@@ -34,10 +34,10 @@ Log into OpenShift AI using the credentials you have been provided.
 
 ![images/create-workbench.png](images/create-workbench-2.png)
 
-7. Add the **environment variables** as illustrated below.  Please reflect to your own environment been created for your lab.  *** REVISIT
+1. Add the **environment variables** as illustrated below.  Please reflect to your own environment been created for your lab.
 ![images/environment-variables.png](images/environment-variables.png)
 
-7. Click **Create workbench**  
+1. Click **Create workbench**  
    OpenShift AI proceeds to create the `vllm` **Workbench**.  
    Monitor the **Status** of the workbench until it changes to `Running`.
 
