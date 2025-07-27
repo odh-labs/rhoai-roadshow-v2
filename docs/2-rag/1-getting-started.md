@@ -37,7 +37,7 @@ Your instructor will supply you with a link that you will use to login to your O
 8. Enter the following details into the form:  
    Connection name: **rag-s3-storage**  
    Access key: **minio**  
-   Secret key: **minio1234**  
+   Secret key: **password**  
    Endpoint: **minio.minio.svc.cluster.local:9000**  
    Region: **none**  
    Bucket: **rag-docs**  
