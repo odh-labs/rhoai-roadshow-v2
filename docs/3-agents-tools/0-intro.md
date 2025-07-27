@@ -2,7 +2,7 @@
 
 Let's explore the LLamaStack playground application first. This is a [Streamlit](https://streamlit.io/) built application that allows you to explore your LLamaStack deployment. You should be able to browse and login here.
 
-<a href="https://llama-stack-playground-agent-demo.apps.sno.<CLUSTER_DOMAIN>" target="_blank">LLamaStack playground</a>
+<a href="https://llama-stack-playground-llama-stack.apps.sno.<CLUSTER_DOMAIN>" target="_blank">LLamaStack playground</a>
 
 ## LLamaStack
 
@@ -10,7 +10,7 @@ Let's explore the LLamaStack playground application first. This is a [Streamlit]
 
 If you are intersted in how to configure LLamaStack, checkout the [docs](https://llama-stack.readthedocs.io/en/latest/) and you can also take a look at the running config in your cluster:
 
-<a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/agent-demo/configmaps/run-config" target="_blank">ConfigMap run-config</a>
+<a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/llama-stack/configmaps/llama-stack-config" target="_blank">ConfigMap llama-stack-config</a>
 
 ## Models
 
