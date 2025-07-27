@@ -1,5 +1,7 @@
 # Agents and MCP
 
+Go into the `rhoai-roadshow-v2` folder and open the top level `3-agents-tools.jupyterlab-workspace` workspace.
+
 Open up the following notebook in your workspace.
 
 <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level4_agents_and_mcp.ipynb" target="_blank">Level4_agents_and_mcp.ipynb</a>

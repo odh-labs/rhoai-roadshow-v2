@@ -20,6 +20,8 @@ Select `Create workbench`.
 
 ## Open the first notebook in your workbench
 
+Go into the `rhoai-roadshow-v2` folder and open the top level `3-agents-tools.jupyterlab-workspace` workspace.
+
 Clone the code using your github user into your workbench by using the `Terminal` and entering:
 
 ```bash

@@ -1,5 +1,7 @@
 # Advanced Agent with Prompt Chaining and ReAct
 
+Go into the `rhoai-roadshow-v2` folder and open the top level `3-agents-tools.jupyterlab-workspace` workspace.
+
 Open up the following notebook in your workspace.
 
 <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level3_advanced_agent_with_Prompt_Chaining_and_ReAct.ipynb" target="_blank">Level3_advanced_agent_with_Prompt_Chaining_and_ReAct.ipynb</a>

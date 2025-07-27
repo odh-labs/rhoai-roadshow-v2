@@ -1,5 +1,7 @@
 # Simple Agent with Web Search
 
+Go into the `rhoai-roadshow-v2` folder and open the top level `3-agents-tools.jupyterlab-workspace` workspace.
+
 Open up the following notebook in your workspace.
 
 <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/3-agents-tools/notebooks/Level2_simple_agent_with_websearch.ipynb" target="_blank">Level2_simple_agent_with_websearch.ipynb</a>
