@@ -8,13 +8,13 @@ Let's explore the LLamaStack playground application first. This is a [Streamlit]
 
 [LLamaStack](https://llama-stack.readthedocs.io/en/latest/) is the open-source framework for building generative AI applications. We have a LLamaStack server configured for our use and we are going to take a look around using the playground UI.
 
-If you are intersted in how to configure LLamaStack, checkout the [docs](https://llama-stack.readthedocs.io/en/latest/) and you can also take a look at the running config in your cluster:
+If you are interested in how to configure LLamaStack, check out the [docs](https://llama-stack.readthedocs.io/en/latest/) and you can also take a look at the running config in your cluster:
 
 <a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/llama-stack/configmaps/llama-stack-config" target="_blank">ConfigMap llama-stack-config</a>
 
 ## Models
 
-We have four models configured in LLamaStack. Three of them are available to `Chat` to i.e. are type `llm` in the model dropdown. The other model is an `embedding` model used to create vector embeddings for RAG.
+We have four models configured in LLamaStack. Three of them are available to `Chat` to, i.e., are type `llm` in the model dropdown. The other model is an `embedding` model used to create vector embeddings for RAG.
 
 ```yaml
 models:
@@ -42,7 +42,7 @@ models:
 
 The *llama-3* and *deepseek* models are running locally in the OpenShift cluster - they are small in terms of parameter size (3b and 8b) and the DeepSeek model is quantized to 4-bit. This reduces the amount of memory they consume on the GPU. Even so we are using 18Gi of nvram to run the LLM's. If you browse to the <a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/llama-serving/core~v1~Pod" target="_blank">Deepseek Pod</a> enter the `Terminal` and run `nvtop` on the command line to see the GPU performance.
 
-The *llama-4 scout* model is running in a Model as a Service (MaaS) eternally to the cluster. It is a much larber LLM (17b), but still quantized (w4a16).
+The *llama-4 scout* model is running in a Model as a Service (MaaS) externally to the cluster. It is a much larger LLM (17b), but still quantized (w4a16).
 
 ![images/model-gpu.png](images/model-gpu.png)
 
@@ -52,7 +52,7 @@ You can chat with either of the three LLM models. You should note that the llama
 
 ![images/chat-intro.png](images/chat-intro.png)
 
-The llama-4 model running in MaaS is a RedHat validated model and is a [Mixture of Experts (MoE)](https://huggingface.co/blog/moe) model - you can see the RedHat validated models on [RedHatAI Hugging Face](https)://huggingface.co/RedHatAI/Llama-4-Scout-17B-16E-Instruct-quantized.w4a16)
+The llama-4 model running in MaaS is a RedHat validated model and is a [Mixture of Experts (MoE)](https://huggingface.co/blog/moe) model - you can see the RedHat validated models on [RedHatAI Hugging Face](https://huggingface.co/RedHatAI/Llama-4-Scout-17B-16E-Instruct-quantized.w4a16)
 
 ## RAG
 
@@ -66,11 +66,11 @@ LLamaStack is configured to use an inbuilt version of the [Milvus vector databas
       db_path: ${env.MILVUS_DB_PATH}
 ```
 
-If you want, you can try it out by uplaoding a TXT, PDF, DOC, DOCX document, then `Create Document Collection` and use it for RAG.
+If you want, you can try it out by uploading a TXT, PDF, DOC, DOCX document, then `Create Document Collection` and use it for RAG.
 
 ![images/rag-intro.png](images/rag-intro.png)
 
-I uploaded the famous`bitcoin.pdf` document from Satoshi 🤑
+I uploaded the famous `bitcoin.pdf` document from Satoshi 🤑
 
 ## Tools, Agents and MCP Servers
 
