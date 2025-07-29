@@ -1,6 +1,10 @@
 # 💁 Introduction
 
-In this exercise we will configure the workbench that you will use for the lab. Follow the steps described in this document to configure the lab environment.
+This workshop uses JupyterLab for most of the activities. In this exercise we will:
+1. Connect to the workshop environment
+2. Create the OpenShift AI **Project** that you will use for the entire workshop.
+3. Create a **Workbench** for you to do your work
+3. Get familiar with the JupyterLab environment
 
 # Login to OpenShift AI
 
@@ -9,53 +13,48 @@ Your instructor will supply you with a link that you will use to login to your O
 1. Open the OpenShift AI console using the url provided by your instructor.  
 2. Use the following credentials to login to OpenShift AI:  
       **Username:** *admin*  
-      **Password:** *password*
+      **Password:** *password* (You will be provided with the password on the day.)
+3. Click **Login**  
+   OpenShift AI displays the main console.   
+
+![./images/create-project.png](images/create-project.png)
+
+# Create a project
+
+1. Click the **Create project** button on the top right of the display.
+2. Type `ai-roadshow` in the **Name** text box.
+
+![./images/create-project-2.png](images/create-project-2.png)  
+
+3. Click **Create**
+   OpenShift AI creates an empty project.
+
+![./images/create-workbench-0.png](images/create-workbench-0.png)  
 
 # Create a workbench
 
-3. Select the `ai-roadshow` data science project.
+4. Select the `ai-roadshow` data science project.
 
 ![./images/create-workbench.png](images/create-workbench.png)
 
-4. Enter the following details into the **Create workbench** form:
+5. Enter the following details into the **Create workbench** form:
 
-   Name: **rag-workbench**  
-   Image Selection: **CUDA**  
+   Name: **getting-connected**  
+   Image Selection: **Minimal Python**  
    Version: **2025.1 (Recommended)**  
-   Hardware profile: **NVIDIA L4 (Shared)**  
+   Hardware profile: **Small**  
+
+   Leave all other settings as defaults.
 
 ![./images/create-workbench-1.png](images/create-workbench-1.png)
 
----
+   Review the information you have entered:
 
-## Enter the S3 storage credentials
-
-5. Scroll down to the **Connections** section 
-
-6. Click the **Create connection** button.
-7. Click **S3 compatible object storage - v1** from the *connection-type* drop-down list.
-8. Enter the following details into the form:  
-   Connection name: **rag-s3-storage**  
-   Access key: **minio**  
-   Secret key: **password**  
-   Endpoint: **minio.minio.svc.cluster.local:9000**  
-   Region: **none**  
-   Bucket: **rag-docs**  
-
-Review the information you have entered:
-
-![./images/create-workbench-2.png](images/create-workbench-2.png)
-
-9. Click **Create**.
-
-⚠️ **Note:** You may receive a warning from your browser informing you of a weak password. You can safely ignore that warning.
-
-
-10. Click **Create workbench**
+6. Click **Create workbench**
 
 OpenShift AI creates and starts the workbench.
 
-![./images/create-workbench-3.png](images/create-workbench-3.png)
+![./images/create-workbench-3.png](images/create-workbench-2.png)
 
 Wait for the status to change to *Running*.  
 
