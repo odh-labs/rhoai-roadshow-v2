@@ -26,19 +26,17 @@ Your instructor will supply you with a link that you will use to login to your O
 
 ![./images/create-project-2.png](images/create-project-2.png)  
 
-3. Click **Create**
+3. Click **Create**  
    OpenShift AI creates an empty project.
 
 ![./images/create-workbench-0.png](images/create-workbench-0.png)  
 
 # Create a workbench
 
-4. Select the `ai-roadshow` data science project.
+4. Click **Create a workbench** in the *Workbenches* group box.  
+   OpenShift AI prompts you to complete the *Workbench* details.  
 
-![./images/create-workbench.png](images/create-workbench.png)
-
-5. Enter the following details into the **Create workbench** form:
-
+5. Enter the following details into the **Create workbench** form:  
    Name: **getting-connected**  
    Image Selection: **Minimal Python**  
    Version: **2025.1 (Recommended)**  
