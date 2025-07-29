@@ -87,3 +87,17 @@ echo "💥 Setup EFS" | tee -a output.log
 # final check
 echo "💥 Checking install..." | tee -a output.log
 ./gitops/bootstrap/check-install.sh 2>&1 | tee -a output.log
+
+# roadshow clusters dont need to live beyond the roadshow use a fake pull-secret
+echo "💥 Remove global pull-secret..." | tee -a output.log
+oc delete secret pull-secret -n openshift-config
+oc create -f- << EOF
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJjbG91ZC5vcGVuc2hpZnQuY29tIjp7ImF1dGgiOiJabUZyWlFvPSIsImVtYWlsIjoiZmFrZUByZWRoYXQuY29tIn0sInF1YXkuaW8iOnsiYXV0aCI6IlptRnJaUW89IiwiZW1haWwiOiJmYWtlQHJlZGhhdC5jb20ifSwicmVnaXN0cnkuY29ubmVjdC5yZWRoYXQuY29tIjp7ImF1dGgiOiJabUZyWlFvPSIsImVtYWlsIjoiZmFrZUByZWRoYXQuY29tIn0sInJlZ2lzdHJ5LnJlZGhhdC5pbyI6eyJhdXRoIjoiWm1GclpRbz0iLCJlbWFpbCI6ImZha2VAcmVkaGF0LmNvbSJ9fX0K
+kind: Secret
+metadata:
+  name: pull-secret
+  namespace: openshift-config
+type: kubernetes.io/dockerconfigjson
+EOF
