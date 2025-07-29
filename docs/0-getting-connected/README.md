@@ -4,4 +4,4 @@ In this activity, you will learn how to connect to your workshop environment and
 
 Click **Get Connected** to get started.
 
-  * [🌌 Get Connected](0-getting-connected/1-get-connected.md)
+  * [⛓️ Get Connected](0-getting-connected/1-get-connected.md)
