@@ -2,7 +2,7 @@
 
 ## Create a workbench
 
-Login to OpenShift AI and select the `agent-demo` data science project.
+Login to OpenShift AI and select the `ai-roadshow` data science project.
 
 ![images/create-workbench.png](images/create-workbench.png)
 
@@ -31,7 +31,7 @@ metadata:
   labels:
     opendatahub.io/dashboard: "true"
   name: gpuaas-storage
-  namespace: agent-demo
+  namespace: ai-roadshow
 spec:
   accessModes:
   - ReadWriteOnce
