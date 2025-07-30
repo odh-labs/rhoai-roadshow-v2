@@ -1,6 +1,5 @@
 * [Cover](/)
-* [Getting Connected](0-getting-connected/README.md)
-  * [⛓️ Get Connected](0-getting-connected/1-get-connected.md)
+* [Get connected](0-getting-connected/1-get-connected.md)
 * [RAG](2-rag/README.md)
   * [🔭 Introduction](2-rag/0-intro.md)
   * [🌌 Getting started - configure the lab workbench](2-rag/1-getting-started.md)
