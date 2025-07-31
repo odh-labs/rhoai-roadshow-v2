@@ -24,8 +24,8 @@ In this module, we will walk you through the key features of Red Hat AI Inferenc
 
 **Agenda:**
 
-* 📍 [Getting started - configure the lab workbench](4-rhaiis/1-getting-started.md)
-* 📍 [Validate the lab environment](4-rhaiis/2-shakeout-test.md)
-* 📍 [Inference with vLLM](4-rhaiis/3-inference-with-vllm.md)
-* 📍 [Optimize the models](4-rhaiis/4-optimize-models.md)
-* 📍 [Red Hat Validated Models](4-rhaiis/5-validated-models.md)
+* 🌌 [Getting started - configure the lab workbench](4-rhaiis/1-getting-started.md)
+* ☑️ [Validate the lab environment](4-rhaiis/2-shakeout-test.md)
+* 🛹 [Inference with vLLM](4-rhaiis/3-inference-with-vllm.md)
+* 🛼 [Optimize the models](4-rhaiis/4-optimize-models.md)
+* 📚 [Red Hat Validated Models](4-rhaiis/5-validated-models.md)
