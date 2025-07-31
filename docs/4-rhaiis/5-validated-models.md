@@ -12,9 +12,9 @@ To support this, Red Hat AI provides access to a repository of third-party model
 
 These leading third-party models undergo capacity planning scenarios, helping you make informed decisions about the best combination of model, deployment settings, and hardware accelerator for your domain-specific use cases.
 ### Red Hat AI repository on HuggingFace
-1. Click this link (**[Red Hat AI on Huggingface](https://huggingface.co/RedHatAI)**) to explore the Red Hat AI Hugging Face repository.  
+Click this link (**[Red Hat AI on Huggingface](https://huggingface.co/RedHatAI)**) to explore the Red Hat AI Hugging Face repository.  
 
-<img src="4-rhaiis/images/red-hat-hugging-face.png" style="width:50%;">
+![images/red-hat-hugging-face.png](images/red-hat-hugging-face.png)
 
 ### Features and Benefits
 
@@ -28,12 +28,12 @@ These aren’t just any LLMs. Red Hat has tested third-party models using realis
 - **GuideLLM** – Evaluates performance and cost across different hardware setups.
 - **LM Evaluation Harness** – Tests model generalisation across a variety of tasks.
 
-<img src="4-rhaiis/images/llama-4-quantised.png" style="width:50%;">
+![images/llama-4-quantised.png](images/llama-4-quantised.png)
 
 - **Evaluation and Recovery of Accuracy** – For each quantised model, Red Hat publishes detailed accuracy evaluation results alongside methods used to recover or preserve model accuracy after quantisation. This ensures that performance gains from compression do not come at the expense of model quality, helping you make informed trade-offs between efficiency and accuracy.
 
 
-<img src="4-rhaiis/images/llama-4-evaluation.png" style="width:50%;">
+![images/lllama-4-evaluation.png](images/llama-4-evaluation.png)
 
 ## Deploying models with Red Hat OpenShift AI
 
@@ -41,12 +41,12 @@ Generally, managing models in production environments will leverage some trusted
 The workflow involves steps such as: The AI/Data team will push the pretrained models into S3 bucket, then operations team builds up a data pipeline to pull the model and serve it using the built-in serving runtime.
 
 
-<img src="4-rhaiis/images/mlops-workflow.png" style="width:70%;">
+![images/mlops-workflow.png](images/mlops-workflow.png)
 
 When it comes to serving a model, Red Hat OpenShift AI provides a variety of serving runtimes out of the box (**vLLM**, **OpenVINO**, **Caikit**, **LlamaCPP**, and more).  
 The following screenshot illustrates the out of the box model serving options:
 
-<img src="4-rhaiis/images/serving-runtimes.png" style="width:70%;">
+![images/serving-runtimes.png](images/serving-runtimes.png)
 
 
 💁🏼 If you need a different serving runtime then Red Hat OpenShift AI provides features to add your own.  
@@ -76,7 +76,7 @@ By using an OCI-compliant layout, ModelCar allows models to be stored in standar
 
 Red Hat OpenShift AI (since v2.14) enables the ability of serving models directly from a **container** registry using **ModelCar**. Users are also able to deploy a ModelCar-based model directly from the dashboard.
 
-<img src="4-rhaiis/images/model-serving-architecture.png" style="width:70%;">
+![images/model-serving-architecture.png](images/model-serving-architecture.png)
 
 ---
 ## Exercise: Deploy a validated model on Red Hat OpenShift AI
@@ -85,28 +85,28 @@ You will now deploy a validated model form the Red Hat Validated Model Repositor
 1. Click **Data science projects** in the Explorer.
 2. Type **vllm-demo** in the *Filter* text box.  
 
-<img src="4-rhaiis/images/select-project.png" style="width:70%;">
+![images/select-project.png](images/select-project.png)
 
 3. Click the **`vllm-demo`** project.  
    OpenShift AI opens the project and displays the project overview screen.
 
-<img src="4-rhaiis/images/project-overview.png" style="width:70%;">
+![images/project-overview.png](images/project-overview.png)
 
-3. Click **Models** in the *project toolbar*.
+4. Click **Models** in the *project toolbar*.
 
-<img src="4-rhaiis/images/model-server-list.png" style="width:70%;">
+![images/model-server-list.png](images/model-server-list.png)
 
-4. Click **Select single model** in the *Single-model serving platform* tile.  
+5. Click **Select single model** in the *Single-model serving platform* tile.  
    OpenShift AI displays a list of existing model deployments (there are none currently).
 
-<img src="4-rhaiis/images/deploy-model-1.png" style="width:70%;">
+![images/deploy-model-1.png](images/deploy-model-1.png)
 
-5. Click **Deploy model**  
+6. Click **Deploy model**  
    OpenShift AI prompts you to complete the deployment details.
 
-<img src="4-rhaiis/images/deploy-model-2.png" style="width:70%;">
+![images/deploy-model-2.png](images/deploy-model-2.png)
 
-6. Enter the following information into the *Deployment Details* form:
+7. Enter the following information into the *Deployment Details* form:
 - **Model deployment name:** `granite-3.1-2b-instruct`  
  ⚠️ **Note:** The model has to be on the ModelCar catalog at https://github.com/redhat-ai-services/modelcar-catalog
 - **Serving runtime:** `vLLM NVIDIA GPU ServingRuntime for KServe`
@@ -118,15 +118,15 @@ You will now deploy a validated model form the Red Hat Validated Model Repositor
 - **Connection name:** `granite-3.1-2b-instruct`
 - **URI:** `oci://quay.io/redhat-ai-services/modelcar-catalog:granite-3.1-2b-instruct`
 
-7. Review the form details are correct.
-8. Click **Deploy**
+8. Review the form details are correct.
+9. Click **Deploy**
    OpenShift AI downloads the model from the Red Hat public repository and proceeds to deploy it on your cluster.
    
-9. Wait until the Status turns to ✅.
+10. Wait until the Status turns to ✅.
 
    **⚠️The deployment process can take up to 10 mins to complete for the first time.**  
 
-<img src="4-rhaiis/images/deploy-model-3.png" style="width:70%;">
+![images/deploy-model-3.png](images/deploy-model-3.png)
 
 ## 💡 Simplifying model deployments with the OpenSHift AI Model Catalog
 
@@ -138,7 +138,7 @@ We have made this even easier by introducing **📚 Model Catalog** and **🗃�
 The Model Catalog serves as a centralised repository where data scientists can discover, register, and manage ML models.  
 The catalog contents are both Red Hat validated models as well as common and popular third-party models that Red Hat has verified toe provinance.
 
-<img src="4-rhaiis/images/model-catalog.png" style="width:70%;">
+![images/model-catalog.png](images/model-catalog.png)
 
 ### 🗃️ Model Registry
 The Model Registry acts as the backend storage system for ML models, offering structured management and version control.  
@@ -150,7 +150,7 @@ In this activity you will dpeloy a model from the *Model Catalog.*
 2. Click the **Llama-3.1-8B-Instruct-quantized.w4a16** model tile.
    OpenShift AI displays the model details page.
 
-<img src="4-rhaiis/images/model-catalog-2.png" style="width:70%;">
+![images/model-catalog-2.png](images/model-catalog-2.png)
 
 3. Click the `Deploy Model` button  
    OpenShift AI prompts to select the project to deploy the model into.  
@@ -159,16 +159,16 @@ In this activity you will dpeloy a model from the *Model Catalog.*
 5. Type **vllm** in the *list-box search* text box and press **Enter.**  
    OpenShift AI displays the *vllm-demo* project.  
 
-<img src="4-rhaiis/images/model-catalog-3.png" style="width:70%;">
+![images/model-catalog-3.png](images/model-catalog-3.png)
 
 6. Click **vllm-demo**  
    OpenShift AI displays the *model deployment* form.  
 7. Enter the following details while leaving all other values as their defaults:  
    - **Serving runtime:** vLLM NVIDIA GPU ServingRuntime for KServe  
 
-<img src="4-rhaiis/images/model-catalog-4.png" style="width:70%;">
+![images/model-catalog-4.png](images/model-catalog-4.png)
 
- 8. Click the **Deploy** button.
+8. Click the **Deploy** button.
    OpenShift AI deploys the model
 ---
 This is the end of Lab 3 - Validated models.
