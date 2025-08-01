@@ -70,7 +70,7 @@ If you want, you can try it out by uploading a TXT, PDF, DOC, DOCX document, the
 
 ![images/rag-intro.png](images/rag-intro.png)
 
-I uploaded the famous `bitcoin.pdf` document from Satoshi 🤑
+I uploaded the famous [**bitcoin.pdf**](https://bitcoin.org/bitcoin.pdf) document from Satoshi 🤑
 
 Note that the context sizes (max tokens) for the models are set as follows, so use the Llama4 model for best results (you may get errors depending on your document size).
 
