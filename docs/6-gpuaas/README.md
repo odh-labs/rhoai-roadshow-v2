@@ -9,4 +9,4 @@ We are going to learn about GPU as a Service.
 * 👷‍♂️ [Advanced GPUaaS with Kueue](6-gpuaas/4-advanced-gpuaas.md)
 * 👷‍♂️ [GPUaaS multi GPU+Node](6-gpuaas/5-gpuaas-multi-gpu-node.md)
 
-Click Introduction to get started.
+Click **Introduction** to get started.
