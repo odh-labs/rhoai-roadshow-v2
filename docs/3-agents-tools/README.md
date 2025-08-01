@@ -8,4 +8,4 @@ We are going to learn about agents and tools and how to use them.
 * 🤖 [Advanced Agents with Prompt Chanining and ReAct Agent](3-agents-tools/3-advanced-agent-with-prompt-chain-react.md)
 * 💥 [Agents with MCP](3-agents-tools/4-agents-and-mcp.md)
 
-Click Introduction to get started.
+Click **Introduction** to get started.
