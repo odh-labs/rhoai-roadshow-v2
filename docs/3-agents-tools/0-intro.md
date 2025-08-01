@@ -72,6 +72,14 @@ If you want, you can try it out by uploading a TXT, PDF, DOC, DOCX document, the
 
 I uploaded the famous `bitcoin.pdf` document from Satoshi 🤑
 
+Note that the context sizes (max tokens) for the models are set as follows, so use the Llama4 model for best results (you may get errors depending on your document size).
+
+```yaml
+Llama3:    15000
+DeepSeek:  10000
+Llama4:    110000
+```
+
 ## Tools, Agents and MCP Servers
 
 We are going to deep dive into Agents and Tools, Model Context Protocol servers (MCP) in this section and see how we can create and use them. 
