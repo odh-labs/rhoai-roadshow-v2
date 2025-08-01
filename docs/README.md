@@ -3,6 +3,8 @@
 <!-- panels:start -->
 <!-- div:floating-cat -->
 <img src="images/daisy.png">
+
+🐈 Daisy Cat is famous !🐈 and was one of the main attractions in the PetBattle app that formed the technical exercises in the book - [DevOps Culture and Practice with OpenShift - Deliver continuous business value through people, process, and technology](https://www.redhat.com/en/engage/devops-culture-practice-openshift-ebooks). Daisy inspired us to use many of the open practices described in the book to help deliver this Roadshow and we hope that you are like Daisy, where [**curiosity killed the cat but satisfaction brought it back**](https://en.wikipedia.org/wiki/Curiosity_killed_the_cat).
 <!-- panels:end -->
 
 <!-- tabs:start -->
