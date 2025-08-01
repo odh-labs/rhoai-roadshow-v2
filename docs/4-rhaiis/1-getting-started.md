@@ -2,44 +2,36 @@
 
 In this exercise we will configure the workbench that you will use for the lab. Follow the steps described in this document to configure the lab environment.
 
-## Access the environment
+# Login to OpenShift AI
 
-Log into OpenShift AI using the credentials you have been provided.
+Your instructor will supply you with a link that you will use to login to your OpenShift AI cluster.
 
-## Create a project
+1. Open the OpenShift AI console using the url provided by your instructor.  
+2. Use the following credentials to login to OpenShift AI:  
+      **Username:** *admin*  
+      **Password:** *password*
 
-1. Click **Data science projects** in the navigation pane.  
-   OpenShift AI lists all of the existing projects.  
+# Create a workbench
 
-2. Click **Create project**.  
-
-3. enter the follwing into the **Create project** form:  
-   **Name:** `vllm-demo`  
-   **Description:** `This project is to demo the Red Hat AI Inference Server (RHAIIS).`
-
-    ![images/create-project.png](images/create-project.png)
-
-4. Click **Create**.  
-   OpenShift AI creates the new project and displays the project details.
-
+3. Select the `ai-roadshow` data science project.
     ![images/create-workbench.png](images/create-workbench.png)
-
-5. Click **Create a workbench** in the **Workbenches** group box.  
+   
+4. Click **Create a workbench** in the **Workbenches** group box.  
    OpenShift AI displays a form to enter the workbench details.
 
-6. Enter the following details into the **Create workbench** form:   
+5. Enter the following details into the **Create workbench** form:   
    Name: **vllm**  
    Image Selection: **CUDA**  
    Version: **2025.1 (Recommended)**  
    Hardware profile: **NVIDIA L4 (Shared)**  
 
-    ![images/create-workbench.png](images/create-workbench-2.png)
+    ![images/create-workbench-2.png](images/create-workbench-2.png)
 
-7. Add the **environment variables** as illustrated below.  Please reflect to your own environment been created for your lab.
+6. Add the **environment variables** as illustrated below.  Please reflect to your own environment been created for your lab.
 
     ![images/environment-variables.png](images/environment-variables.png)
 
-8. Click **Create workbench**  
+7. Click **Create workbench**  
    OpenShift AI proceeds to create the `vllm` **Workbench**.  
    Monitor the **Status** of the workbench until it changes to `Running`.
 
