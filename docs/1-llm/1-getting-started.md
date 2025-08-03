@@ -9,7 +9,7 @@ Your instructor will supply you with a link that you will use to login to your O
 1. Open the OpenShift AI console using the url provided by your instructor.  
 2. Use the following credentials to login to OpenShift AI:  
       **Username:** *admin*  
-      **Password:** *password*
+      **Password:** *(Your instructor will supply your passowrd on the day.)*
 
 # Create a workbench
 
@@ -26,36 +26,11 @@ Your instructor will supply you with a link that you will use to login to your O
 
 ![./images/create-workbench-1.png](images/create-workbench-1.png)
 
----
-
-## Enter the S3 storage credentials
-
-5. Scroll down to the **Connections** section 
-
-6. Click the **Create connection** button.
-7. Click **S3 compatible object storage - v1** from the *connection-type* drop-down list.
-8. Enter the following details into the form:  
-   Connection name: **rag-s3-storage**  
-   Access key: **minio**  
-   Secret key: *This will be supplied by your instructor on the day*  
-   Endpoint: **minio.minio.svc.cluster.local:9000**  
-   Region: **none**  
-   Bucket: **rag-docs**  
-
-Review the information you have entered:
-
-![./images/create-workbench-2.png](images/create-workbench-2.png)
-
-9. Click **Create**.
-
-⚠️ **Note:** You may receive a warning from your browser informing you of a weak password. You can safely ignore that warning.
-
-
-10. Click **Create workbench**
+5. Click **Create workbench**
 
 OpenShift AI creates and starts the workbench.
 
-![./images/create-workbench-3.png](images/create-workbench-3.png)
+![./images/create-workbench-2.png](images/create-workbench-2.png)
 
 Wait for the status to change to *Running*.  
 
@@ -65,14 +40,14 @@ The workbench has now been created. You will now open the workbench, which will 
 
 # Open the Jupyter notebook
 
-1. Click **rag-workbench** to open **JupyterLab**.  
+6. Click **rag-workbench** to open **JupyterLab**.  
    In the login dialog box, enter the same credentials you used to log into OpenShift at the start of this lab.
 
-2. Click **Login**  
+7. Click **Login**  
    OpenShift AI launches JupyterLab.  
 
 With JupyterLab now running, you will now download all of the lab materials:  
-3. Click the **Git** button in the toolbar on the left side of JupyterLab.  
+8. Click the **Git** button in the toolbar on the left side of JupyterLab.  
 
 ![./images/jupyter-lab.png](images/jupyter-lab.png)  
 
@@ -93,10 +68,10 @@ With JupyterLab now running, you will now download all of the lab materials:
 
 ![images/clone-git-repo-4.png](images/clone-git-repo-4.png)  
 
-9. Double click `2-rag.jupyterlab-workspace` to open the workspace for this activity.  
+9. Double click `1-llm.jupyterlab-workspace` to open the workspace for this activity.  
    JupyterLab opens the workspace. All of the notebooks you will use are visible in the *File Explorer*.  
 
 
-![images/clone-git-repo-4.png](images/clone-git-repo-5.png)  
+![images/clone-git-repo-5.png](images/clone-git-repo-5.png)  
 
 When done, you have successfully connected to your environment and this completes this activity. Click the link below to move to the next activity 'Validate the lab environment'.

@@ -97,6 +97,6 @@ With JupyterLab now running, you will now download all of the lab materials:
    JupyterLab opens the workspace. All of the notebooks you will use are visible in the *File Explorer*.  
 
 
-![images/clone-git-repo-4.png](images/clone-git-repo-5.png)  
+![images/clone-git-repo-5.png](images/clone-git-repo-5.png)  
 
 When done, you have successfully connected to your environment and this completes this activity. Click the link below to move to the next activity 'Validate the lab environment'.
