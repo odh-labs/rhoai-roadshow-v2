@@ -1,0 +1,2 @@
+langchain-core==0.3.68
+langchain-openai==0.3.27
