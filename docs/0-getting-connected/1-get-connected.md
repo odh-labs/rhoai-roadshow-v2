@@ -157,7 +157,7 @@ Now that you know the basics, give it a try!
 
 In your workbench:
 
-1. In the _File Explorer_ open the notebook called `0-first-jupyter-notebook.ipynb`
+1. In the _File Explorer_ open the notebook called: <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/0-getting-connected/notebook/0-first-jupyter-notebook.ipynb" target="_blank">0-first-jupyter-notebook.ipynb</a>
 
 2. Experiment by, for example, running the existing cells, adding more cells and creating functions.  
 
