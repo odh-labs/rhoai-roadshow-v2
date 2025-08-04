@@ -26,7 +26,7 @@ Your instructor will supply you with a link that you will use to login to your O
 
    OpenShift AI displays the main console.
 
-![./images/create-project.png](images/create-project.png)
+    ![./images/create-project.png](images/create-project.png)
 
 ## Create a project
 
@@ -34,13 +34,13 @@ Your instructor will supply you with a link that you will use to login to your O
 
 2. Type `ai-roadshow` in the **Name** text box.
 
-![images/create-project-2.png](images/create-project-2.png)  
+    ![images/create-project-2.png](images/create-project-2.png)  
 
 3. Click **Create**
 
 OpenShift AI creates an empty project.
 
-![images/create-workbench-0.png](images/create-workbench-0.png)  
+    ![images/create-workbench-0.png](images/create-workbench-0.png)  
 
 ## Create a workbench
 
@@ -70,8 +70,7 @@ OpenShift AI creates an empty project.
 
     The workbench has now been created. You will now open the workbench, which will launch **JupyterLab**, your IDE for the lab.  
 
----
-# Open the Jupyter notebook
+## Open the Jupyter notebook
 
 1. Click **getting-connected** to open *JupyterLab*.
 
@@ -112,13 +111,11 @@ OpenShift AI creates an empty project.
 
     ![images/clone-git-repo-5.png](images/clone-git-repo-5.png)
 
-When done, you have successfully connected to your environment. 
-    
----
+When done, you have successfully connected to your environment.
 
-# Get familiar with JupyterLab
+## Get familiar with JupyterLab
 
-## Running code in a notebook
+### Running code in a notebook
 
 📝 NOTE: If you're already at ease with Jupyter Notebooks, you can skip to the next section.
 
@@ -136,10 +133,9 @@ Code cells contain Python code that you can run interactively. You can modify th
 
 You can run a code cell from either the notebook interface or from the keyboard:
 
-* **From the JupyterLab console,** select the top-most cell (by clicking inside the cell or to the left side of the cell) and then click **Run** from the toolbar.  
+* **From the JupyterLab console,** select the top-most cell (by clicking inside the cell or to the left side of the cell) and then click **Run** from the toolbar.
 
-   ![images/02-05-run_button.png](images/02-05-run_button.png)
-
+![images/02-05-run_button.png](images/02-05-run_button.png)
 
 * **From the keyboard:** Press **CTRL**+**ENTER** to run a cell or press **SHIFT**+**ENTER**`** to run the cell and automatically select the next one.
 
@@ -149,15 +145,15 @@ After you run a cell, you can see the result of its code as well as information 
 
 When you save a notebook, the code and the results are saved. You can reopen the notebook to look at the results without having to run the program again, while still having access to the code.
 
-## Notebooks blend code with documentation
+### Notebooks blend code with documentation
 
 Notebooks are so named because they are like a physical _notebook_: you can take notes about your experiments (which you will do), along with the code itself, including any parameters that you set. You can see the output of the experiment inline (this is the result from a cell after it's run), along with all the notes that you want to take (to do that, from the menu switch the cell type from `Code` to `Markdown`).
 
-## Try It
+### Try It
 
 Now that you know the basics, give it a try!
 
-### Procedure
+#### Procedure
 
 In your workbench:
 
@@ -165,20 +161,19 @@ In your workbench:
 
 2. Experiment by, for example, running the existing cells, adding more cells and creating functions.  
 
-You can do what you want - it's your environment and there is no risk of breaking anything or impacting other users. This environment isolation is also a great advantage brought by {rhoai}.
-* Optionally, create a new notebook in which the code cells are run by using a Python 3 kernel:
-* Create a new notebook by either selecting **File > New > Notebook** or by clicking the Python 3 tile in the Notebook section of the launcher window:  
+    You can do what you want - it's your environment and there is no risk of breaking anything or impacting other users. This environment isolation is also a great advantage brought by {rhoai}.
 
-![images/02-05-new_notebook.png](images/02-05-new_notebook.png)
+    * Optionally, create a new notebook in which the code cells are run by using a Python 3 kernel:
+    * Create a new notebook by either selecting **File > New > Notebook** or by clicking the Python 3 tile in the Notebook section of the launcher window:  
 
-You can use different kernels, with different languages or versions, to run in your notebook.
+    ![images/02-05-new_notebook.png](images/02-05-new_notebook.png)
+
+    You can use different kernels, with different languages or versions, to run in your notebook.
 
 ## Additional resource
 
 * If you want to learn more about notebooks, go to https://jupyter.org.
 
----
-
-# End of activity
+## End of activity
 
 Congratulations and this completes this activity. Click the link below to move to the next activity.
