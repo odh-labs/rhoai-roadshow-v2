@@ -8,10 +8,10 @@ Please go to the notebook In JupyterLab, open the notebook: <a href="https://git
 
 You've successfully:
 
-✅ Installed and configured vLLM  
-✅ Served a model using vLLM   
-✅ Tested inference via HTTP API   
-✅ Benchmarked performance with real metrics   
-✅ Understood key performance indicators  
+✅ Installed and configured vLLM
+✅ Served a model using vLLM
+✅ Tested inference via HTTP API
+✅ Benchmarked performance with real metrics
+✅ Understood key performance indicators
 
 You now have hands-on experience with enterprise-grade LLM inference serving!
