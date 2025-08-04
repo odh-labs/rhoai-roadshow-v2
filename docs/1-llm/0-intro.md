@@ -2,7 +2,7 @@
 
 You will have used an LLM like Chat GPT before. In this module you will explore how to work with LLMs programmatically.
 
-Agenda: 
+Agenda:
 
 * [🚀 Introduction](1-llm/0-intro.md)
 * [👟 Getting started - configure the lab workbench](1-llm/1-getting-started.md)
