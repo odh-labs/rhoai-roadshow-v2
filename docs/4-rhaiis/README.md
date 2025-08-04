@@ -1,4 +1,4 @@
-# RHAIIS - Red Hat AI Inference Server
+<img width="644" height="784" alt="image" src="https://github.com/user-attachments/assets/079611d3-2bcf-4d72-b872-ff87f5c62ab7" /># RHAIIS - Red Hat AI Inference Server
 
 The modern high performance LLM serving engine - Red Hat AI Inference Server & vLLM.
 
@@ -36,5 +36,6 @@ The Agenda:
 * 🛹 [Inference with vLLM](4-rhaiis/3-inference-with-vllm.md)
 * 🛼 [Optimize the models](4-rhaiis/4-optimize-models.md)
 * 📚 [Red Hat Validated Models](4-rhaiis/5-validated-models.md)
+* 🧹 [Clean Up the lab environment](4-rhaiis/6-cleanup.md)
 
 Click **Introduction** to get started.
