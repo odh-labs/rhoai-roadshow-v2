@@ -2,7 +2,7 @@
 
 Now that you are connected to your workbench, you will validate that the lab environment has been properly configured with everything that is needed to successfully run the lab.
 
-From the `rhoai-roadshow-v2/lab-materials/1-llm` folder, please open the notebook called: `2-validate-environment.ipynb`.
+From the `rhoai-roadshow-v2/lab-materials/1-llm` folder, please open the notebook called: <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/1-llm/notebook/2-validate-environment.ipynb" target="_blank">2-validate-environment.ipynb</a>
 
 Follow all instructions from inside the Notebook. If your environment has been provisioned correctly then you will see a result like the following image:
 

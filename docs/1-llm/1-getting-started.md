@@ -16,7 +16,7 @@ Your instructor will supply you with a link that you will use to login to your O
 
 1. Select the `ai-roadshow` data science project.
 
-    ![images/create-workbench-0.png](images/create-workbench.png)
+    ![images/create-workbench-0.png](images/create-workbench-0.png)
 
 2. Enter the following details into the **Create workbench** form:
 
