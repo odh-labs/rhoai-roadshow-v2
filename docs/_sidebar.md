@@ -26,6 +26,7 @@
   * [🛹 Inference with vLLM](4-rhaiis/3-inference-with-vllm.md)
   * [🛼 Optimize models](4-rhaiis/4-optimize-models.md)
   * [📚 Validated models](4-rhaiis/5-validated-models.md)
+  * [🧹Cleanup](4-rhaiis/6-cleanup.md)
 * [GPU As A Service](6-gpuaas/README.md)
   * [📈 Introduction](6-gpuaas/0-intro.md)
   * [🚀 Add a GPU Node](6-gpuaas/1-add-gpu-node-cluster.md)
