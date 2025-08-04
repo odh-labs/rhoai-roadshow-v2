@@ -1,4 +1,4 @@
-<img width="644" height="784" alt="image" src="https://github.com/user-attachments/assets/079611d3-2bcf-4d72-b872-ff87f5c62ab7" /># RHAIIS - Red Hat AI Inference Server
+# RHAIIS - Red Hat AI Inference Server
 
 The modern high performance LLM serving engine - Red Hat AI Inference Server & vLLM.
 
