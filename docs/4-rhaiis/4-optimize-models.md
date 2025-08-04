@@ -10,11 +10,11 @@ Please go to the notebook <a href="https://github.com/odh-labs/rhoai-roadshow-v2
 
 Model optimization with LLM Compressor and vLLM provides significant advantages:
 
-✅ **Lower operational costs** - 40-50% GPU savings \
-✅ **Faster deployment** - streamlined optimization process  \
-✅ **Maintained accuracy** - minimal performance degradation \
-✅ **Real-time responsiveness** - improved inference speed \
-✅ **Scalability** - deploy AI smarter and cheaper 
+✅ **Lower operational costs** - 40-50% GPU savings
+✅ **Faster deployment** - streamlined optimization process
+✅ **Maintained accuracy** - minimal performance degradation
+✅ **Real-time responsiveness** - improved inference speed
+✅ **Scalability** - deploy AI smarter and cheaper
 
 Whether you're scaling a startup or steering an enterprise, quantization lets you deploy AI more efficiently while maintaining quality and performance.
 
@@ -30,4 +30,4 @@ Whether you're scaling a startup or steering an enterprise, quantization lets yo
 
 - [LLM Compressor Documentation](https://github.com/vllm-project/llm-compressor)
 - [LLM Compressor: Optimize LLMs for low-latency deployments](https://developers.redhat.com/articles/2025/05/09/llm-compressor-optimize-llms-low-latency-deployments)
-- [vLLM Documentation](https://docs.vllm.ai/) 
+- [vLLM Documentation](https://docs.vllm.ai/)
