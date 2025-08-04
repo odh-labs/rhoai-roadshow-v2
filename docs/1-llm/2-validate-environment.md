@@ -6,7 +6,6 @@ From the `rhoai-roadshow-v2/lab-materials/1-llm` folder, please open the noteboo
 
 Follow all instructions from inside the Notebook. If your environment has been provisioned correctly then you will see a result like the following image:
 
-![images/validate-env-1.png](images/validate-env-1.png) 
-
+![images/validate-env-1.png](images/validate-env-1.png)
 
 When done, you can close the notebook and head to the next activity by clicking the link below.
