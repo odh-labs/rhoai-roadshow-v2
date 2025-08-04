@@ -15,6 +15,7 @@ By the end of this notebook, you will understand:
 ## What is RAG?
 
 **Retrieval-Augmented Generation (RAG)** is a powerful technique that combines the strengths of:
+
 - **Information Retrieval**: Finding relevant documents from a knowledge base
 - **Generative AI**: Using Large Language Models to generate human-like responses
 
@@ -27,7 +28,7 @@ By the end of this notebook, you will understand:
 
 ### The RAG Pipeline
 
-```
+```bash
 Query → Embedding → Vector Search → Context Retrieval → LLM Generation → Response
 ```
 
@@ -41,6 +42,6 @@ This implementation demonstrates a simple but complete RAG system:
 4. **Vector Database**: Milvus for storing and searching embeddings
 5. **LLM Integration**: Llama model for generating responses
 
-From the rhoai-roadshow-v2/lab-materials/2-rag folder, please open the notebook called 4-simple-rag.ipynb and follow the instructions.
+From the rhoai-roadshow-v2/lab-materials/2-rag folder, please open the notebook called: <a href="https://github.com/odh-labs/rhoai-roadshow-v2/blob/main/docs/2-rag/notebook/4-simple-rag.ipynb" target="_blank">4-simple-rag.ipynb</a>
 
 When done, you can close the notebook and head to the next page.
