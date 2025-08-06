@@ -39,7 +39,7 @@ Your instructor will supply you with a link that you will use to login to your O
 
 ## Open the Jupyter notebook
 
-1. Click **rag-workbench** to open **JupyterLab**.
+1. Click **llm-workbench** to open **JupyterLab**.
 
     In the login dialog box, enter the same credentials you used to log into OpenShift at the start of this lab.
 
