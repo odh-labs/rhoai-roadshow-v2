@@ -44,7 +44,7 @@ After logging on to OpenShift you will open the OpenShift AI platform from the A
 
 3. Click **Create**
 
-OpenShift AI creates an empty project.
+    OpenShift AI creates an empty project.
 
     ![images/create-workbench-0.png](images/create-workbench-0.png)  
 
