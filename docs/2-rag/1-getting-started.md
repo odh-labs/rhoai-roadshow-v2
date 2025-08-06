@@ -38,12 +38,12 @@ Your instructor will supply you with a link that you will use to login to your O
 
 4. Enter the following details into the form:
 
-    Connection name: **rag-s3-storage**
-    Access key: **minio**
-    Secret key: *This will be supplied by your instructor on the day*
-    Endpoint: **minio.minio.svc.cluster.local:9000**
-    Region: **none**
-    Bucket: **rag-docs**
+    Connection name: **rag-s3-storage**  
+    Access key: **minio**  
+    Secret key: *This will be supplied by your instructor on the day*  
+    Endpoint: **minio.minio.svc.cluster.local:9000**  
+    Region: **none**  
+    Bucket: **rag-docs**  
 
     Review the information you have entered:
 
