@@ -14,15 +14,21 @@ This workshop uses JupyterLab for most of the activities. In this exercise we wi
 
 ## Login to OpenShift AI
 
-Your instructor will supply you with a link that you will use to login to your OpenShift AI cluster.
+**Pre-requisites:** You have logged on to OpenShift.  
 
-1. Open the OpenShift AI console using the url provided by your instructor.  
+After logging on to OpenShift you will open the OpenShift AI platform from the Applications menu.  
+1. Click the **Applications** menu button in the OpenShift toolbar.  
 
-2. Use the following credentials to login to OpenShift AI:  
-      **Username:** *admin*  
-      **Password:** *password* (You will be provided with the password on the day.)
+    ![./images/login-rhoai.png](images/login-rhoai.png)
 
-3. Click **Login**  
+2. Click **Red Hat OpenShift AI**.  
+   📝 Note: In this workshop we have not enabled single sign-on so OpenShift AI will prompt you to log in.  
+
+3. Log in using the credentials for the workshop:  
+      **Username:** (You will be provided with the username on the day.)  
+      **Password:** (You will be provided with the password on the day.)  
+
+4. Click **Login**  
 
    OpenShift AI displays the main console.
 
