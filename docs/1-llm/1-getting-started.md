@@ -20,7 +20,7 @@ Your instructor will supply you with a link that you will use to login to your O
 
 2. Enter the following details into the **Create workbench** form:
 
-    Name: **rag-workbench**  
+    Name: **llm-workbench**  
     Image Selection: **CUDA**  
     Version: **2025.1 (Recommended)**  
     Hardware profile: **NVIDIA L4 (Shared)**  
