@@ -2,57 +2,77 @@
 
 💊 Install the `rhoai-roadshow` using ansible. 💊
 
+This takes approx ~70-120 minutes to complete.
+
 ## Prerequsites
 
-Order an `AWS Blank Open Environment` for yourself from this catalog item [demo.redhat.com](https://demo.redhat.com/catalog?search=AWS+Blank)
+1. Order an `Getting to know Red Hat OpenShift AI Workshop` for yourself from this catalog item [demo.redhat.com](https://catalog.demo.redhat.com/catalog?search=Getting+to+know+Red+Hat+OpenShift+AI+Workshop)
 
-- You need to install from a rhel/fedora linux laptop with working ansible, python3, bash, kustomize, helm, htpasswd, oc - else use the toolbox
-- You need your Red Hat pull secret for OpenShift installation.
-- You need reliable internet access.
-- You need to use an AWS Region where L4 Nvidia GPU's are available - `us-east` is cheapest with great capacity.
-- Not tested on MAC.OSX, sno-for-spot will work OK, but dunno about the other bits.
+    - You need to install from a rhel/fedora linux laptop with working ansible, python3, bash, kustomize, helm, htpasswd, oc - else use the `toolbox` image
+    - You need your Red Hat pull secret for OpenShift installation.
+    - You need reliable internet access.
+    - You need to use an AWS Region where L4 Nvidia GPU's are available - `us-east` is cheapest with great capacity.
+    - Not tested on MAC.OSX, sno-for-spot will work OK, but dunno about the other bits.
 
-You can install it from a [fedora toolbox](https://github.com/eformat/toolbox) that has the required tools baked it.
+2. You can install it from a [fedora toolbox](https://github.com/eformat/toolbox) that has the required tools baked it.
 
-```bash
-toolbox create --image quay.io/eformat/toolbox:latest sno-test
-toolbox enter sno-test
-```
+    ```bash
+    toolbox create --image quay.io/eformat/toolbox:latest sno-test
+    toolbox enter sno-test
+    ```
 
-## Install it all in one go
+3. OR you can use podman directly
+
+    ```bash
+    podman run
+    ```
+
+4. Clone the Codebase
+
+    ```bash
+    git clone https://github.com/odh-labs/rhoai-roadshow-v2
+    ```
+
+    and cd into it.
+
+    ```bash
+    cd rhoai-roadshow-v2
+    ```
+
+## Install all in one go
 
 Create AWS config:
 
 ```yaml
 # ~/.aws/credentials
 [sno-test]
-aws_access_key_id = A...
-aws_secret_access_key = o...
+aws_access_key_id = A...      # change this (available from the lab instructions page in demo redhat com)
+aws_secret_access_key = o...  # change this (available from the lab instructions page in demo redhat com)
 
 # ~/.aws/config
 [profile sno-test]
-region=us-east-2
+region=us-east-2    # matches the region you wish to install SNO into
 output=json
 ```
 
 Export in your environment.
 
 ```bash
-export AWS_PROFILE=sno-test             # must match aws config
-export AWS_DEFAULT_REGION=us-east-2     # change this to suit instance type
-export AWS_DEFAULT_ZONES=["us-east-2a"] # change this to suit
-export AWS_ACCESS_KEY_ID=...      # change this
-export AWS_SECRET_ACCESS_KEY=...  # change this
-export CLUSTER_NAME=sno
-export BASE_DOMAIN=sandbox2585.opentlc.com
-export PULL_SECRET=~/tmp/pull-secret  # NOTE THIS IS THE FILE ! ansible messes up the quoting
-export SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-export INSTANCE_TYPE=g6.8xlarge # 24GB L4 Nvidia, 32 vCPUs, 128 GiB of memory and 25 Gibps of bandwidth ~$2 per hour
-export ROOT_VOLUME_SIZE=400
-export OPENSHIFT_VERSION=4.19.1
+export AWS_PROFILE=sno-test                  # must match aws config
+export AWS_DEFAULT_REGION=us-east-2          # change this to suit instance type
+export AWS_DEFAULT_ZONES=["us-east-2a"]      # change this to suit
+export AWS_ACCESS_KEY_ID=...      # change this (available from the lab instructions page in demo redhat com)
+export AWS_SECRET_ACCESS_KEY=...  # change this (available from the lab instructions page in demo redhat com)
+export CLUSTER_NAME=sno           # can be anything, but leave as sno unless you need to change it
+export BASE_DOMAIN=sandbox3000.opentlc.com    # (available from the lab instructions page in demo redhat com)
+export PULL_SECRET=~/tmp/pull-secret          # NOTE THIS IS A FILE - download your pull secret here https://console.redhat.com/openshift/downloads#tool-pull-secret
+export SSH_KEY=$(cat ~/.ssh/id_rsa.pub)       # NOTE THIS IS A FILE
+export INSTANCE_TYPE=g6.8xlarge   # 24GB L4 Nvidia, 32 vCPUs, 128 GiB of memory and 25 Gibps of bandwidth ~$2 per hour
+export ROOT_VOLUME_SIZE=400       # can be anything, but leave as is unless you need to change it
+export OPENSHIFT_VERSION=4.19.5   # change this we will keep this working with the latest GA version
 export ADMIN_PASSWORD=password    # change this for your admin user
-export EMAIL=mhepburn@redhat.com  # change this for certs admin
-export ANSIBLE_VAULT_SECRET=,..   # change this to the ansible secret for vault-sno
+export EMAIL=your@email.com       # change this for lets encrypt certs admin email
+export ANSIBLE_VAULT_SECRET=..    # change this to the ansible secret for vault-sno (available from the lab instructions page in demo redhat com)
 ```
 
 Run ansible to install environment in one go.
@@ -105,8 +125,3 @@ Login to your environment.
 ```bash
 oc login -u admin -p ${ADMIN_PASSWORD} -server=https://api.sno.${BASE_DOMAIN}:6443
 ```
-
-## Things to work on
-
-- [ ] `FIXME` - ⚒️ the minio password and secret is egregiously leaked in git - move to vault ⚒️
-- [ ] `FIXME` - ⚒️ scale this to (n) workshop users - currently each user has single node of openshift with all the tools ⚒️
