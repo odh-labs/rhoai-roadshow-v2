@@ -103,6 +103,12 @@ ok: [localhost] => {
 }
 ```
 
+The OpenShift install logs (detailed) can be tailed here.
+
+```yaml
+tail -f /tmp/ansible.fb3ma5ra/cluster/.openshift_install.log
+```
+
 To destroy your cluster:
 
 ```bash
@@ -112,7 +118,7 @@ openshift-install destroy cluster --dir=cluster
 
 There are 3 roles with matching folder names:
 
-1. `sno-on-spot` - Cluster Install - if this fails, its usually best to diagnose, destroy the cluster and reinstall fresh.
+1. `sno-on-spot` - Cluster Install - if this fails, its usually best to diagnose (e.g. no availability for your instance type), destroy the cluster and reinstall fresh.
 
 2. `cluster-config` - Configures the base cluster - role is re-runnable.
 
