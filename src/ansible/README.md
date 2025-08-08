@@ -8,9 +8,9 @@ This takes approx ~70-120 minutes to complete.
 
 1. Order an `Getting to know Red Hat OpenShift AI Workshop` for yourself from this catalog item [demo.redhat.com](https://catalog.demo.redhat.com/catalog?search=Getting+to+know+Red+Hat+OpenShift+AI+Workshop)
 
-    - You need to install from a rhel/fedora linux laptop with working ansible, python3, bash, kustomize, helm, htpasswd, oc - else use the `toolbox` image
+    - You need to install from a rhel/fedora linux laptop with working ansible, python3, bash, kustomize, helm, htpasswd, oc - else use the `toolbox`/`podman` image below.
     - You need your Red Hat pull secret for OpenShift installation.
-    - You need reliable internet access.
+    - You need reliable internet access whilst the install is happening.
     - You need to use an AWS Region where L4 Nvidia GPU's are available - `us-east` is cheapest with great capacity.
     - Not tested on MAC.OSX, sno-for-spot will work OK, but dunno about the other bits.
 
@@ -24,7 +24,9 @@ This takes approx ~70-120 minutes to complete.
 3. OR you can use podman directly
 
     ```bash
-    podman run
+    mkdir -p ~/tmp/lab
+    podman run -it -v ~/tmp/lab:/root:z quay.io/eformat/toolbox:latest bash
+    cd /root
     ```
 
 4. Clone the Codebase
@@ -36,24 +38,30 @@ This takes approx ~70-120 minutes to complete.
     and cd into it.
 
     ```bash
-    cd rhoai-roadshow-v2
+    cd rhoai-roadshow-v2/src/ansible
     ```
 
 ## Install all in one go
 
 Create AWS config:
 
+```bash
+mkdir -p ~/.aws
+```
+
 ```yaml
-# ~/.aws/credentials
+# vi ~/.aws/credentials
 [sno-test]
 aws_access_key_id = A...      # change this (available from the lab instructions page in demo redhat com)
 aws_secret_access_key = o...  # change this (available from the lab instructions page in demo redhat com)
 
-# ~/.aws/config
+# vi ~/.aws/config
 [profile sno-test]
 region=us-east-2    # matches the region you wish to install SNO into
 output=json
 ```
+
+If using podman copy your ~/.ssh/id_rsa.pub and ~/tmp/pull-secret files into your container.
 
 Export in your environment.
 
@@ -124,4 +132,10 @@ Login to your environment.
 
 ```bash
 oc login -u admin -p ${ADMIN_PASSWORD} -server=https://api.sno.${BASE_DOMAIN}:6443
+```
+
+Keep a copy of your `/tmp/ansible.xxx` folder for future OpenShift cluster uninstalls e.g.
+
+```bash
+mv /tmp/ansible.xxx ~/sno-test
 ```
