@@ -8,6 +8,8 @@ This takes approx ~70-120 minutes to complete.
 
 1. Order an `Getting to know Red Hat OpenShift AI Workshop` for yourself from this catalog item [demo.redhat.com](https://catalog.demo.redhat.com/catalog?search=Getting+to+know+Red+Hat+OpenShift+AI+Workshop)
 
+    Once you have the workshop I recommend `Stopping it` in demo redhat com - this prevents the environment shutting down prematurely (and you running into ~24hr OpenShift install certificate issues).
+
     - You need to install from a rhel/fedora linux laptop with working ansible, python3, bash, kustomize, helm, htpasswd, oc - else use the `toolbox`/`podman` image below.
     - You need your Red Hat pull secret for OpenShift installation.
     - You need reliable internet access whilst the install is happening.
