@@ -23,6 +23,13 @@ This takes approx ~70-120 minutes to complete.
     toolbox enter sno-test
     ```
 
+    Create a venv inside the toolbox (python 3.8+ required)
+
+    ```bash
+    python3.13 -m venv venv
+    source venv/bin/activate
+    ```
+
 3. OR you can use podman directly
 
     ```bash
