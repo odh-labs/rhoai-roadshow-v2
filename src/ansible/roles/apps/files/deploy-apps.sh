@@ -47,7 +47,7 @@ console_links() {
             exit 1
         fi
         sleep 10
-        cat gitops/bootstrap/console-links.yaml | envsubst | oc apply -f-
+        cat gitops/bootstrap/console-links-${ENVIRONMENT}.yaml | envsubst | oc apply -f-
     done
     echo "💥 Install console links Done" | tee -a output.log
 }
