@@ -13,6 +13,9 @@ echo "💥 Working directory is: $(pwd)" | tee -a output.log
 # use login
 export KUBECONFIG=~/.kube/config.${AWS_PROFILE}
 
+# use roadshow app-of-apps
+export ENVIRONMENT=roadshow
+
 login () {
     echo "💥 Login to OpenShift..." | tee -a output.log
     local i=0
@@ -68,7 +71,7 @@ vault_secret() {
 
 # install apps
 echo "💥 Install apps" | tee -a output.log
-./gitops/bootstrap/install.sh -d 2>&1 | tee -a output.log
+./gitops/bootstrap/install.sh -e ${ENVIRONMENT} -d 2>&1 | tee -a output.log
 
 # console links
 console_links
