@@ -139,14 +139,14 @@ There are 3 roles with matching folder names:
 
     ```bash
     export KUBECONFIG=/path/to-kubeconfig
-    oc login -u admin -p ${ADMIN_PASSWORD} -server=https://api.sno.${BASE_DOMAIN}:6443
+    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.sno.${BASE_DOMAIN}:6443
     ansible-playbook -i hosts role_runner.yml -e role=apps
     ```
 
 Login to your environment.
 
 ```bash
-oc login -u admin -p ${ADMIN_PASSWORD} -server=https://api.sno.${BASE_DOMAIN}:6443
+oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.sno.${BASE_DOMAIN}:6443
 ```
 
 Keep a copy of your `/tmp/ansible.xxx` folder for future OpenShift cluster uninstalls e.g.
