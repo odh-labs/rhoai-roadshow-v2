@@ -2,10 +2,28 @@
 
 ENV_FILE="env.txt"
 
-# Ensure env.txt exists
+# Create env.txt if missing, with required defaults
 if [[ ! -f "$ENV_FILE" ]]; then
-    echo "Error: $ENV_FILE not found!"
-    exit 1
+    cat > "$ENV_FILE" <<'EOF'
+export AWS_PROFILE=sno-test
+export AWS_DEFAULT_REGION=us-east-2
+export AWS_DEFAULT_ZONES=["us-east-2a"]
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+export CLUSTER_NAME=sno
+export BASE_DOMAIN=sandbox3000.opentlc.com
+export PULL_SECRET=~/tmp/pull-secret
+export SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
+export OPENSHIFT_VERSION=4.19.6
+export ADMIN_PASSWORD=your-password
+export EMAIL=your@email.com
+
+# Defaults (not prompted)
+export INSTANCE_TYPE=g6.8xlarge   # 24GB L4 Nvidia, 32 vCPUs, 128 GiB of memory and 25 Gibps of bandwidth ~$2 per hour
+export ROOT_VOLUME_SIZE=400       # can be anything, but leave as is unless you need to change it
+export ANSIBLE_VAULT_SECRET=<ansible-vault-secret>   # change this to the ansible secret for vault-sno
+EOF
+    echo "✅ Created $ENV_FILE with default values."
 fi
 
 # Function to prompt with defaults
