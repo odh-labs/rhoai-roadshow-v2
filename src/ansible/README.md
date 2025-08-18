@@ -72,7 +72,7 @@ output=json
 
 If using podman copy your ~/.ssh/id_rsa.pub and ~/tmp/pull-secret files into your container.
 
-### Scripted Environment COnfiguration Method:
+### Scripted Environment Configuration Method:
 Use the `setup-env.sh` script to create the environment configuration file (`env.txt`). Manually edit the `env.txt` to set the vault secret. Note: The `setup-env.txt` will also manage configuring the AWS credentials and configuration
 
 Define the environment variables:
@@ -81,7 +81,7 @@ Define the environment variables:
 source env.txt
 ```
 
-### Manual Environment COnfiguraiton Method
+### Manual Environment Configuration Method
 Export in your environment.
 
 ```bash
