@@ -79,6 +79,16 @@ Use the `setup-env.sh` script to create the environment configuration file (`env
 ./setup-env.sh
 ```
 
+Review the environment variables iand AWS config are correct:
+
+```bash
+cat env.txt
+
+cat ~/.aws/credentials
+
+cat ~/.aws/config
+```
+
 Define the environment variables:
 
 ```bash
