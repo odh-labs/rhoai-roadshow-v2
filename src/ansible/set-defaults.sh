@@ -84,6 +84,8 @@ if command -v aws >/dev/null 2>&1; then
     aws configure set aws_access_key_id     "$AWS_ACCESS_KEY_ID"     --profile "$AWS_PROFILE"
     aws configure set aws_secret_access_key "$AWS_SECRET_ACCESS_KEY" --profile "$AWS_PROFILE"
     aws configure set region                "$AWS_DEFAULT_REGION"    --profile "$AWS_PROFILE"
+    aws configure set output                "json"                   --profile "$AWS_PROFILE"
+
     echo "✅ AWS CLI profile \"$AWS_PROFILE\" updated (region: $AWS_DEFAULT_REGION)."
 else
     echo "⚠️  AWS CLI not found. Skipped updating AWS profile."
