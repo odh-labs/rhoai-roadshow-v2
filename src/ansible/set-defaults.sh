@@ -79,6 +79,16 @@ EMAIL=$(prompt_update "EMAIL" "$EMAIL")
 
 echo "✅ env.txt updated successfully."
 
+# --- Validate Pull Secret ---
+PULL_SECRET_EXPANDED=$(eval echo "$PULL_SECRET")
+if [[ ! -f "$PULL_SECRET_EXPANDED" ]]; then
+    echo "❌ Pull secret not found at: $PULL_SECRET_EXPANDED"
+    echo "   Please ensure the path is correct in $ENV_FILE."
+    exit 1
+else
+    echo "✅ Pull secret exists at: $PULL_SECRET_EXPANDED"
+fi
+
 # --- Sync to AWS CLI profile ---
 if command -v aws >/dev/null 2>&1; then
     aws configure set aws_access_key_id     "$AWS_ACCESS_KEY_ID"     --profile "$AWS_PROFILE"
