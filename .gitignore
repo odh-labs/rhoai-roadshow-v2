@@ -198,3 +198,6 @@ cython_debug/
 
 # VS Code
 *.code-workspace
+
+# Environment config file that may contain a secret
+src/ansible/env.txt
