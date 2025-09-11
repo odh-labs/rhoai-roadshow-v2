@@ -116,6 +116,8 @@ export EMAIL=your@email.com       # change this for lets encrypt certs admin ema
 export ANSIBLE_VAULT_SECRET=..    # change this to the ansible secret for vault-sno (available from the lab instructions page in demo redhat com)
 ```
 
+### Running the installation
+
 Run ansible to install environment in one go.
 
 ```bash
