@@ -194,3 +194,4 @@ cython_debug/
 .cursorindexingignore
 rhoai-roadshow.code-workspace
 rhoai-roadshow-v2.code-workspace
+src/ansible/env.txt

@@ -81,6 +81,15 @@ ANSIBLE_VAULT_SECRET=$(prompt_update "ANSIBLE_VAULT_SECRET" "$ANSIBLE_VAULT_SECR
 
 echo "✅ env.txt updated successfully."
 
+# Must look like ["zone1","zone2",...]
+if [[ ! "$AWS_DEFAULT_ZONES" =~ ^\[[[:space:]]*\"[^\"[:cntrl:]]+\"([[:space:]]*,[[:space:]]*\"[^\"[:cntrl:]]+\")*[[:space:]]*\]$ ]]; then
+    echo "❌ AWS_DEFAULT is not properly formatted: $AWS_DEFAULT_ZONES"
+    echo "   Please ensure the format is a json array. E.g. [\"us-east-2a\"] in $ENV_FILE."
+    exit 1
+else
+    echo "✅ AWS_DEFAULT_ZONES is correctly formatted: $AWS_DEFAULT_ZONES"
+fi
+
 # --- Validate Pull Secret ---
 PULL_SECRET_EXPANDED=$(eval echo "$PULL_SECRET")
 if [[ ! -f "$PULL_SECRET_EXPANDED" ]]; then
