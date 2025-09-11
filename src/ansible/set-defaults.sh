@@ -62,6 +62,7 @@ SSH_KEY=$(grep '^export SSH_KEY=' "$ENV_FILE" | cut -d'=' -f2-)
 OPENSHIFT_VERSION=$(grep '^export OPENSHIFT_VERSION=' "$ENV_FILE" | cut -d'=' -f2-)
 ADMIN_PASSWORD=$(grep '^export ADMIN_PASSWORD=' "$ENV_FILE" | cut -d'=' -f2-)
 EMAIL=$(grep '^export EMAIL=' "$ENV_FILE" | cut -d'=' -f2-)
+ANSIBLE_VAULT_SECRET=$(grep '^export ANSIBLE_VAULT_SECRET=' "$ENV_FILE" | cut -d'=' -f2-)
 
 # Prompt user for updates (capture new values back)
 AWS_PROFILE=$(prompt_update "AWS_PROFILE" "$AWS_PROFILE")
@@ -76,8 +77,28 @@ SSH_KEY=$(prompt_update "SSH_KEY" "$SSH_KEY")
 OPENSHIFT_VERSION=$(prompt_update "OPENSHIFT_VERSION" "$OPENSHIFT_VERSION")
 ADMIN_PASSWORD=$(prompt_update "ADMIN_PASSWORD" "$ADMIN_PASSWORD")
 EMAIL=$(prompt_update "EMAIL" "$EMAIL")
+ANSIBLE_VAULT_SECRET=$(prompt_update "ANSIBLE_VAULT_SECRET" "$ANSIBLE_VAULT_SECRET")
 
 echo "✅ env.txt updated successfully."
+
+# Must look like ["zone1","zone2",...]
+if [[ ! "$AWS_DEFAULT_ZONES" =~ ^\[[[:space:]]*\"[^\"[:cntrl:]]+\"([[:space:]]*,[[:space:]]*\"[^\"[:cntrl:]]+\")*[[:space:]]*\]$ ]]; then
+    echo "❌ AWS_DEFAULT is not properly formatted: $AWS_DEFAULT_ZONES"
+    echo "   Please ensure the format is a json array. E.g. [\"us-east-2a\"] in $ENV_FILE."
+    exit 1
+else
+    echo "✅ AWS_DEFAULT_ZONES is correctly formatted: $AWS_DEFAULT_ZONES"
+fi
+
+# --- Validate Pull Secret ---
+PULL_SECRET_EXPANDED=$(eval echo "$PULL_SECRET")
+if [[ ! -f "$PULL_SECRET_EXPANDED" ]]; then
+    echo "❌ Pull secret not found at: $PULL_SECRET_EXPANDED"
+    echo "   Please ensure the path is correct in $ENV_FILE."
+    exit 1
+else
+    echo "✅ Pull secret exists at: $PULL_SECRET_EXPANDED"
+fi
 
 # --- Sync to AWS CLI profile ---
 if command -v aws >/dev/null 2>&1; then
