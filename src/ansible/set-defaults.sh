@@ -14,7 +14,7 @@ export CLUSTER_NAME=sno
 export BASE_DOMAIN=sandbox3000.opentlc.com
 export PULL_SECRET=~/tmp/pull-secret
 export SSH_KEY=$(cat ~/.ssh/id_rsa.pub)
-export OPENSHIFT_VERSION=4.19.6
+export OPENSHIFT_VERSION=4.19.11
 export ADMIN_PASSWORD=your-password
 export EMAIL=your@email.com
 
