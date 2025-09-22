@@ -4,6 +4,8 @@
 
 This takes approx ~70-120 minutes to complete.
 
+If you are looking to set the roadshow up for a larger audience, there is now a [Hive ClusterPool based install](https://github.com/eformat/rhoai-cluster-pool) which may be better suited than the all-in-one version described below.
+
 ## Prerequsites
 
 1. Order an `Getting to know Red Hat OpenShift AI Workshop` for yourself from this catalog item [demo.redhat.com](https://catalog.demo.redhat.com/catalog?search=Getting+to+know+Red+Hat+OpenShift+AI+Workshop)
