@@ -2,7 +2,7 @@
 
 Let's explore the LLamaStack playground application first. This is a [Streamlit](https://streamlit.io/) built application that allows you to explore your LLamaStack deployment. You should be able to browse and login here.
 
-<a href="https://llama-stack-playground-llama-stack.apps.sno.<CLUSTER_DOMAIN>" target="_blank">LLamaStack playground</a>
+<a href="https://llama-stack-playground-llama-stack.apps.<CLUSTER_DOMAIN>" target="_blank">LLamaStack playground</a>
 
 ## LLamaStack
 
@@ -10,7 +10,7 @@ Let's explore the LLamaStack playground application first. This is a [Streamlit]
 
 If you are interested in how to configure LLamaStack, check out the [docs](https://llama-stack.readthedocs.io/en/latest/) and you can also take a look at the running config in your cluster:
 
-<a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/llama-stack/configmaps/llama-stack-config" target="_blank">ConfigMap llama-stack-config</a>
+<a href="https://console-openshift-console.apps.<CLUSTER_DOMAIN>/k8s/ns/llama-stack/configmaps/llama-stack-config" target="_blank">ConfigMap llama-stack-config</a>
 
 ## Models
 
@@ -40,7 +40,7 @@ models:
 
 ![images/model-intro.png](images/model-intro.png)
 
-The *llama-3* and *deepseek* models are running locally in the OpenShift cluster - they are small in terms of parameter size (3b and 8b) and the DeepSeek model is quantized to 4-bit. This reduces the amount of memory they consume on the GPU. Even so we are using 18Gi of nvram to run the LLM's. If you browse to the <a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>/k8s/ns/llama-serving/core~v1~Pod" target="_blank">Deepseek Pod</a> enter the `Terminal` and run `nvtop` on the command line to see the GPU performance.
+The *llama-3* and *deepseek* models are running locally in the OpenShift cluster - they are small in terms of parameter size (3b and 8b) and the DeepSeek model is quantized to 4-bit. This reduces the amount of memory they consume on the GPU. Even so we are using 18Gi of nvram to run the LLM's. If you browse to the <a href="https://console-openshift-console.apps.<CLUSTER_DOMAIN>/k8s/ns/llama-serving/core~v1~Pod" target="_blank">Deepseek Pod</a> enter the `Terminal` and run `nvtop` on the command line to see the GPU performance.
 
 The *llama-4 scout* model is running in a Model as a Service (MaaS) externally to the cluster. It is a much larger LLM (17b), but still quantized (w4a16).
 

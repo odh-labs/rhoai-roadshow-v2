@@ -51,10 +51,10 @@ You get to choose the adventure you wish to explore Red Hat OpenShift AI with.
 
 Your cluster should be available from the Console URL
 
-<a href="https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN>" target="_blank">Console URL - https://console-openshift-console.apps.sno.<CLUSTER_DOMAIN></a>
+<a href="https://console-openshift-console.apps.<CLUSTER_DOMAIN>" target="_blank">Console URL - https://console-openshift-console.apps.<CLUSTER_DOMAIN></a>
 
 or if you prefer via the CLI
 
 ```bash
-oc login --server=https://api.sno.<CLUSTER_DOMAIN>:6443 -u admin -p password
+oc login --server=https://api.<CLUSTER_DOMAIN>:6443 -u admin -p password
 ```
