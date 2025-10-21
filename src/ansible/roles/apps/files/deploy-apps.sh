@@ -19,7 +19,7 @@ export ENVIRONMENT=roadshow
 login () {
     echo "💥 Login to OpenShift..." | tee -a output.log
     local i=0
-    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${BASE_DOMAIN}:6443 --insecure-skip-tls-verify=true
+    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${CLUSTER_NAME}.${BASE_DOMAIN}:6443 --insecure-skip-tls-verify=true
     until [ "$?" == 0 ]
     do
         echo -e "${GREEN}Waiting for 0 rc from oc commands.${NC}" 2>&1 | tee -a output.log
@@ -29,7 +29,7 @@ login () {
             exit 1
         fi
         sleep 10
-        oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${BASE_DOMAIN}:6443 --insecure-skip-tls-verify=true
+        oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${CLUSTER_NAME}.${BASE_DOMAIN}:6443 --insecure-skip-tls-verify=true
     done
     echo "💥 Login to OpenShift Done" | tee -a output.log
 }

@@ -159,7 +159,7 @@ There are 3 roles with matching folder names:
 
     ```bash
     export KUBECONFIG=/path/to-kubeconfig
-    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${BASE_DOMAIN}:6443
+    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${CLUSTER_NAME}.${BASE_DOMAIN}:6443
     ansible-playbook -i hosts role_runner.yml -e role=cluster-config
     ```
 
@@ -167,7 +167,7 @@ There are 3 roles with matching folder names:
 
     ```bash
     export KUBECONFIG=/path/to-kubeconfig
-    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${BASE_DOMAIN}:6443
+    oc login -u admin -p ${ADMIN_PASSWORD} --server=https://api.${CLUSTER_NAME}.${BASE_DOMAIN}:6443
     ansible-playbook -i hosts role_runner.yml -e role=apps
     ```
 
